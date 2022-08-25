@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;500;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  /* green */
+  --green: #00b000;
+  --greend: #007500;
+  --greenl: #00e400;
+  --greens: #00ff70;
+  /* black */
+  --blackl: #8a8a8a;
+  --blackd: #2e2e2e;
+  --black: #000;
+  /* white */
+  --whitel: #dedcd5;
+  --whited: #f7d7d7;
+  --white: #fff;
+}
+input,
+button {
+  border: none;
+  outline: none;
+}
+body {
+  background-color: var(--whitel);
+  letter-spacing: 1px;
+  font-family: "Lato", "Roboto Slab", sans-serif;
+}
+
+/* HEADER SECTION */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  padding: 5px 8px;
+  z-index: 999;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 150px;
+  height: 50px;
+  object-fit: cover;
+}
+.menu,
+.logbtn {
+  display: block;
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.list li a {
+  color: var(--greend);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.logbtn a {
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 10px;
+}
+.logbtn a:hover {
+  background-color: transparent;
+  border: 1.5px solid var(--green);
+  color: var(--green);
+}
+.menubtn {
+  width: fit-content;
+  height: fit-content;
+  padding: 8px;
+  display: none;
+  cursor: pointer;
+}
+.menubtn i {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 36px;
+}
+/* header media query  */
+@media screen and (max-width: 750px) {
+  .menu,
+  .logbtn {
+    display: none;
+  }
+  .menubtn {
+    display: block;
+  }
+  .menubtn .bx-menu {
+    display: block;
+  }
+  .menubtn .bx-x {
+    display: none;
+  }
+  .menubtn.active .bx-menu {
+    display: none;
+  }
+  .menubtn.active .bx-x {
+    display: block;
+  }
+  .menu.active {
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 15px;
+    border-radius: 3px;
+    width: 230px;
+    transform: 0.5s ease-in;
+    background-color: var(--white);
+    padding: 8px 0px;
+    z-index: 999;
+    box-shadow: 0 0 5px 5px var(--blackl);
+  }
+  .list {
+    flex-direction: column;
+  }
+}
