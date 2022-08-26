@@ -36,6 +36,47 @@
             <p>Be Inspired by Nature and Let's make our World Greener and Healthier</p>
         </div>
     </section>
+    <!-- INTRO SECTION -->
+    <section class="intro">
+        <div class="images">
+            <div>
+                <i class='bx bxs-leaf'></i>
+                <p>Plant</p>
+            </div>
+            <div>
+                <i class='bx bx-spray-can'></i>
+                <p>Nuture</p>
+            </div>
+            <div>
+                <i class='bx bxs-party'></i>
+                <p>Celebrate</p>
+            </div>
+        </div>
+        <div class="intro-body">
+            <div class="intro-body-text">
+                <h1>Greenie and <span>Nature!</span></h1>
+            </div>
+            <p>Trees are one of the greatest gift given us by nature. Trees have lots of importance
+                to humans and the world at large and we can not over emphasize how blessed we are to
+                have this nature's gift. Trees are very essential starting from its contribution to 
+                our environment by providing oxygen, improving air quality, climate amelioration, 
+                conserving water, preserving soil, and supporting wildlife. Trees, shrubs and turf
+                also filter air by removing dust and absorbing other pollutants like carbon monoxide,
+                sulfur dioxide and nitrogen dioxide. 
+                One of the most essential importance of trees is its ability to provide oxygen and 
+                limit carbon in the atmosphere. According to research and studies, “One acre of forest
+                absorbs six tons of carbon dioxide and puts out four tons of oxygen. This is enough to
+                meet the annual needs of 18 people.” At <span> <b>GREENIE</b> </span> we educate and enlighten 
+                people about the importance of trees as they help absorb and sink the carbon that would
+                otherwise contribute to global heating. We inpire people to <span> <b> PLANT, NUTURE and 
+                CELEBRATE </b> </span> 
+                trees.
+            </p>
+            <div class="learn-body">
+                <a href="">LEARN MORE &#8594;</a>
+            </div>
+        </div>
+    </section>
 
 
 

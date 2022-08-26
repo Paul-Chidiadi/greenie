@@ -211,3 +211,98 @@ body {
     margin: 0px 10px;
   }
 }
+/* INTRO SECTION */
+.intro {
+  width: 100%;
+  display: box;
+  padding: 60px 60px;
+  background: var(--white);
+}
+.intro .images {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 30px;
+  margin: 30px auto;
+}
+.intro .images div {
+  width: 100%;
+}
+.intro .images i {
+  width: 100%;
+  font-size: 100px;
+  font-weight: 700;
+  color: var(--whited);
+  text-align: center;
+  margin: 5px auto;
+}
+.intro .images p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blackd);
+  margin: 10px;
+}
+.intro-body {
+  display: block;
+}
+.intro-body-text h1 {
+  font-family: "lato", sans-serif;
+  margin: 10px auto;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 37px;
+  color: var(--blackd);
+  text-align: center;
+}
+.intro-body-text h1 span {
+  color: var(--green);
+}
+.intro-body p span {
+  color: var(--green);
+}
+.intro-body p {
+  font-family: "lato", sans-serif;
+  margin: 20px auto;
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  color: var(--blackd);
+}
+.learn-body {
+  width: 100%;
+  padding: 20px auto 0px;
+  text-align: center;
+}
+.learn-body a {
+  color: var(--green);
+  font-size: 15px;
+  font-weight: bold;
+}
+/* intro media query */
+@media screen and (max-width: 600px) {
+  .intro {
+    padding: 50px 30px;
+  }
+  .intro .images {
+    width: 100%;
+    padding: 50px 15px;
+  }
+  .intro .images i {
+    font-size: 60px;
+  }
+  .intro-body-text h1 {
+    font-size: 30px;
+  }
+  .intro-body p {
+    font-size: 13px;
+  }
+  .learn-body {
+    padding: 13px auto 0px;
+  }
+  .learn-body a {
+    font-size: 13px;
+  }
+}
