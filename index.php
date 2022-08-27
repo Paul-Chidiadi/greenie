@@ -77,6 +77,26 @@
             </div>
         </div>
     </section>
+    <!-- COMMUNITY SECTION -->
+    <section class="comm">
+        <img src="img/com.png" alt="">
+        <div class="comm-body">
+            <div class="comm-body-text">
+                <h1>Get to Meet with the <br> <span>Greenie</span> Community</h1>
+            </div>
+            <p>Get to meet with people in the community. The <span><b>GREENIE</b></span>  community is a group that is inpired 
+                by nature and motivates one another to plant trees and give back to nature. WE educate and
+                enlighten people on the importance and essence of planting trees and how it helps with 
+                the issues of <b>GLOBAL HEATING</b> caused by various harmful activities done by we humans. We 
+                are glad that we can contribute to the wellness of our surroundings and we will be happy that
+                you join us at <span><b>GREENIE</b></span> and enjoy all the priviledges that comes with it. We have a lot planned
+                out for you. Here at <span><b>GREENIE</b></span>, we inspire people to plant, earn, nuture and celebrate trees.
+                Join our community today and help save the world and make it convenient for our children! 
+                BE a part of this movement now!
+            </p>
+            <a href="">JOIN US <b>&#8594;</a>
+        </div>
+    </section>
 
 
 
