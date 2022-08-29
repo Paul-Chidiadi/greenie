@@ -97,6 +97,51 @@
             <a href="">JOIN US <b>&#8594;</a>
         </div>
     </section>
+    <!-- EARN SECTION -->
+    <section class="earn">
+        <div class="earn-body">
+            <div class="earn-body-text">
+                <h1>Earn with Greenie <br><span>Did you know?</span></h1>
+            </div>
+            <p>You can earn with <span><b>GREENIE</b></span>!. Yes, <b>GREENIE</b> is set at motivating you
+                by giving you the opportunity to earn as you plant. You just have to sign up and start 
+                planting. Make a 30 seconds video of you planting a tree in your area, showing your face
+                and boom your are set to <span><b>EARN!</b></span>. <span><b>GREENIE</b></span> sees you
+                as an eligible earner when you have made at least five invites and have sold or purchased at least
+                a tree from our <span><b>TREE STORE.</b></span> Be part of this movement, get the priviledges that
+                comes with it and start earning.
+            </p>
+            <div class='star'>
+                <div>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <small>"Wow,i can't believe this, absolutely perfect!"</small>
+            </div>
+        </div>
+        <div class="images">
+            <div class="logo">
+                <img src="img/logo2.png" alt="">
+            </div>
+            <div class="img-align">
+                <div>
+                    <img src="img/plant.jpg" alt="">
+                    <p>PLANT</p>
+                </div>
+                <div>
+                    <img src="img/earn.jpg" alt="">
+                    <p>EARN</p>
+                </div>
+                <div>
+                    <img src="img/celebrate.jpg" alt="">
+                    <p>CELEBRATE</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 

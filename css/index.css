@@ -6,6 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: "Lato", "Roboto Slab", sans-serif;
 }
 :root {
   /* green */
@@ -31,7 +32,6 @@ body {
   overflow-x: hidden;
   background-color: var(--whitel);
   letter-spacing: 1px;
-  font-family: "Lato", "Roboto Slab", sans-serif;
 }
 
 /* HEADER SECTION */
@@ -65,7 +65,7 @@ body {
 .list li a {
   color: var(--blackd);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 26px;
 }
 .list li a:hover {
@@ -263,7 +263,7 @@ body {
   color: var(--green);
 }
 .intro-body p {
-  font-family: "lato", sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 20px auto;
   line-height: 26px;
   font-size: 16px;
@@ -308,6 +308,7 @@ body {
 }
 /* COMMUNITY SECTION */
 .comm {
+  background: var(--greens);
   width: 100%;
   padding: 80px;
   display: flex;
@@ -354,7 +355,7 @@ body {
   font-size: 13px;
   padding: 10px 15px;
   text-align: center;
-  margin: 45px auto 35px;
+  margin: 55px auto 35px;
 }
 .comm-body a:hover {
   background-color: transparent;
@@ -368,9 +369,6 @@ body {
   }
   .comm-body-text h1 {
     font-size: 30px;
-  }
-  .comm-body p {
-    font-size: 12px;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -388,7 +386,6 @@ body {
     font-size: 30px;
   }
   .comm-body p {
-    font-size: 12px;
     text-align: center;
   }
   .comm-body a {
@@ -404,6 +401,7 @@ body {
     font-size: 10px;
   }
   .comm-body p {
+    font-size: 13px;
     margin: 20px auto 20px;
   }
 }
@@ -413,5 +411,175 @@ body {
   }
   .comm-body-text h1 {
     font-size: 24px;
+  }
+}
+/* EARN SECTION */
+.earn {
+  width: 100%;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background: var(--white);
+}
+.earn-body {
+  flex-basis: 50%;
+  width: 100%;
+  padding: 30px;
+  display: block;
+}
+.earn-body-text {
+  display: block;
+}
+.earn-body-text h1 {
+  margin: 10px auto;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 37px;
+  color: var(--blackd);
+  text-align: center;
+}
+.earn-body-text h1 span {
+  color: var(--green);
+}
+.earn-body p span {
+  color: var(--green);
+}
+.earn-body p {
+  margin: 20px auto;
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  color: var(--blackd);
+}
+.earn .images {
+  flex-basis: 50%;
+  display: block;
+  width: 100%;
+  padding: 30px;
+}
+.earn .images .logo {
+  width: 100%;
+  height: fit-content;
+  display: block;
+  margin: -30px 0px 60px;
+}
+.earn .images .logo img {
+  width: 250px;
+  display: block;
+  height: 100px;
+  object-fit: cover;
+  margin: 20px auto;
+}
+.earn .images .img-align {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+.earn .images .img-align div {
+  transition: 0.5s ease-in-out;
+}
+.earn .images .img-align div:hover {
+  transform: translateY(-15px);
+}
+.earn .images .img-align img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--greenl);
+  margin-bottom: 10px;
+}
+.earn .images .img-align p {
+  text-align: center;
+  color: var(--whited);
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--greend);
+}
+.earn-body .star {
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.earn-body .star div {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.earn-body .star i {
+  font-size: 28px;
+  color: var(--greenl);
+}
+.earn-body .star small {
+  width: 100%;
+  color: var(--blackl);
+  text-align: center;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 15px;
+  font-style: italic;
+}
+/* earn section media query */
+@media screen and (max-width: 1200px) {
+  .earn {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 700px) {
+  .earn {
+    padding: 30px;
+    gap: 27px;
+  }
+  .earn-body-text h1 {
+    font-size: 26px;
+  }
+  .earn .images .img-align img {
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--greenl);
+  }
+}
+@media screen and (max-width: 500px) {
+  .earn-body {
+    padding: 19px;
+  }
+  .earn-body-text h1 {
+    font-size: 24px;
+  }
+  .earn-body p {
+    font-size: 13px;
+  }
+  .earn .images .img-align img {
+    width: 95px;
+    height: 95px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .earn {
+    gap: 25px;
+  }
+  .earn .images .logo img {
+    width: 180px;
+    height: 100px;
+  }
+  .earn-body {
+    padding: 0px;
+  }
+  .earn .images .img-align img {
+    width: 85px;
+    height: 85px;
+  }
+  .earn .images .img-align {
+    gap: 12px;
   }
 }
