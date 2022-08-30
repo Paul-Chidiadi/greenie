@@ -145,8 +145,8 @@
     <!-- STORE SECTION -->
     <section class="store">
         <h1><span>GREENIE</span> TREE STORE </h1>
-        <p>GREENIE Tree Store helps you find out more about different trees and enlightens you 
-            about trees that best fits your region. At GREENIE STORES you can either sell a tree
+        <p><b>GREENIE</b> Tree Store helps you find out more about different trees and enlightens you 
+            about trees that best fits your region. At <b>GREENIE STORES</b> you can either sell a tree
             or purchase a tree of your choice. Greenie store provides her customers with 
             different packages and loyalties when you sell or purchase a tree from our store. 
             Do you love trees, sell trees or have always wanted to have beautiful trees planted at
@@ -177,6 +177,31 @@
         <div class="don-btn">
             <a href="">DONATE NOW</a>
         </div>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section class="contact">
+        <h1>CONTACT <span>GREENIE</span> </h1>
+        <div class="contain">
+            <div class="info">
+                <div class="good">
+                    <i class="bx bxs-envelope"></i>
+                    <p>greenienature@gmail.com</p>
+                </div>
+                <div class="good">
+                    <i class="bx bx-phone-call"></i>
+                    <p>+234 9091910918</p>
+                </div>
+            </div>
+            <div class="form">
+                <form action="" method="post">
+                    <input type="text" class="control" placeholder="Name" required>
+                    <input type="email" class="control" placeholder="Email" required>
+                    <input type="text" class="control" placeholder="Subject" required>
+                    <textarea placeholder="Message" rows="7"></textarea>
+                    <input type="submit" class="btn" value="SEND">
+                </form>
+            </div>
+        </div>    
     </section>
 
 

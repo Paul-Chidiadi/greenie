@@ -691,3 +691,126 @@ body {
     text-align: justify;
   }
 }
+/* CONTACT SECTION */
+.contact {
+  width: 100%;
+  background-color: var(--whitel);
+  padding: 50px 50px 30px;
+}
+.contact h1 {
+  width: 100%;
+  margin: 15px auto 20px;
+  color: var(--blackd);
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
+.contact h1 span {
+  color: var(--green);
+}
+.contain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 30px;
+}
+.info {
+  width: 100%;
+  flex-basis: 50%;
+}
+.info .good {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.info .good p {
+  font-family: 400;
+  font-size: 13px;
+  color: var(--blackl);
+  padding-bottom: 5px;
+}
+.info .good i {
+  font-size: 25px;
+  color: var(--green);
+}
+.form {
+  width: 100%;
+  flex-basis: 50%;
+}
+.form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.form form .control {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-family: 400;
+  font-size: 13px;
+  color: var(--blackl);
+  border-radius: 5px;
+  border: 1px solid var(--blackd);
+  transition: 0.3s ease-in-out;
+}
+.form form .control:hover {
+  border: 2px solid var(--green);
+}
+.form form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-family: 400;
+  font-size: 13px;
+  color: var(--blackl);
+  outline: none;
+  border: 1px solid var(--blackd);
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+}
+.form form textarea:hover {
+  border: 2px solid var(--green);
+}
+.form form .btn {
+  width: 100%;
+  background-color: var(--green);
+  color: var(--blackd);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 15px;
+  text-align: center;
+  margin: 20px auto;
+  box-shadow: 0 3px 3px 0px var(--blackd);
+}
+.form form .btn:hover {
+  background-color: transparent;
+  color: var(--green);
+  border: 1.5px solid var(--green);
+}
+/* contact section media query */
+@media screen and (max-width: 800px) {
+  .contain {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 450px) {
+  .contact {
+    padding: 50px 20px 30px;
+  }
+  .contact h1 {
+    font-size: 24px;
+  }
+  .contain {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
