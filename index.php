@@ -142,6 +142,21 @@
             </div>
         </div>
     </section>
+    <!-- STORE SECTION -->
+    <section class="store">
+        <h1><span>GREENIE</span> TREE STORE </h1>
+        <p>GREENIE Tree Store helps you find out more about different trees and enlightens you 
+            about trees that best fits your region. At GREENIE STORES you can either sell a tree
+            or purchase a tree of your choice. Greenie store provides her customers with 
+            different packages and loyalties when you sell or purchase a tree from our store. 
+            Do you love trees, sell trees or have always wanted to have beautiful trees planted at
+            your home, farm or garden?, explore our store today and discover more trees that you
+            never knew existed.
+        </p>
+        <div class="don-btn">
+            <a href="">Try Greenie Store</a>
+        </div>
+    </section>
     <!-- DONATION SECTION -->
     <section class="don">
         <div class="don-top">

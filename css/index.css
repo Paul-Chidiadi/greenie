@@ -281,6 +281,10 @@ body {
   font-size: 15px;
   font-weight: bold;
 }
+.learn-body a:hover {
+  color: var(--blackd);
+  font-size: 14px;
+}
 /* intro media query */
 @media screen and (max-width: 600px) {
   .intro {
@@ -403,6 +407,7 @@ body {
   .comm-body p {
     font-size: 12px;
     margin: 20px auto 20px;
+    text-align: justify;
   }
 }
 @media screen and (max-width: 360px) {
@@ -640,8 +645,49 @@ body {
 }
 /* donation section media query */
 @media screen and (max-width: 500px) {
+  .don-top h1 {
+    font-size: 24px;
+  }
   .don p {
-    padding: 10px;
+    padding: 4px;
     font-size: 12px;
+    text-align: justify;
+  }
+}
+/* STORE SECTION */
+.store {
+  width: 100%;
+  background-color: var(--whitel);
+  padding: 45px 30px 30px;
+}
+.store h1 {
+  width: 100%;
+  margin: 10px auto;
+  color: var(--blackd);
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
+.store h1 span {
+  color: var(--green);
+}
+.store p {
+  width: 100%;
+  padding: 20px;
+  color: var(--blackd);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+/* store section media query */
+@media screen and (max-width: 500px) {
+  .store h1 {
+    font-size: 24px;
+  }
+  .store p {
+    padding: 4px;
+    font-size: 12px;
+    text-align: justify;
   }
 }
