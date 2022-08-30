@@ -31,7 +31,7 @@ button {
 body {
   overflow-x: hidden;
   background-color: var(--whitel);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 /* HEADER SECTION */
@@ -251,7 +251,7 @@ body {
   font-family: "lato", sans-serif;
   margin: 10px auto;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 37px;
   color: var(--blackd);
   text-align: center;
@@ -266,7 +266,7 @@ body {
   font-family: "Lato", sans-serif;
   margin: 20px auto;
   line-height: 26px;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 400;
   text-align: justify;
   color: var(--blackd);
@@ -297,7 +297,7 @@ body {
     font-size: 30px;
   }
   .intro-body p {
-    font-size: 13px;
+    font-size: 12px;
   }
   .learn-body {
     padding: 13px auto 0px;
@@ -342,7 +342,7 @@ body {
   font-family: "lato", sans-serif;
   margin: 40px auto 20px;
   line-height: 26px;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 400;
   text-align: left;
   color: var(--blackd);
@@ -401,7 +401,7 @@ body {
     font-size: 10px;
   }
   .comm-body p {
-    font-size: 13px;
+    font-size: 12px;
     margin: 20px auto 20px;
   }
 }
@@ -449,7 +449,7 @@ body {
 .earn-body p {
   margin: 20px auto;
   line-height: 26px;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 400;
   text-align: justify;
   color: var(--blackd);
@@ -557,7 +557,7 @@ body {
     font-size: 24px;
   }
   .earn-body p {
-    font-size: 13px;
+    font-size: 12px;
   }
   .earn .images .img-align img {
     width: 95px;
@@ -581,5 +581,67 @@ body {
   }
   .earn .images .img-align {
     gap: 12px;
+  }
+}
+/* DONATION SECTION */
+.don {
+  width: 100%;
+  background-color: var(--blackd);
+  padding: 30px;
+}
+.don-top {
+  width: 100%;
+  text-align: center;
+}
+.don-top img {
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--greenl);
+  border-radius: 50%;
+  margin: 40px auto 20px;
+}
+.don-top h1 {
+  width: 100%;
+  margin: 10px auto;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 30px;
+}
+.don p {
+  width: 100%;
+  padding: 20px;
+  color: var(--blackl);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+.don-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.don-btn a {
+  align-self: center;
+  background-color: var(--green);
+  color: var(--blackd);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 15px;
+  text-align: center;
+  margin: 25px auto;
+}
+.don-btn a:hover {
+  background-color: transparent;
+  color: var(--green);
+  border: 1.5px solid var(--green);
+}
+/* donation section media query */
+@media screen and (max-width: 500px) {
+  .don p {
+    padding: 10px;
+    font-size: 12px;
   }
 }

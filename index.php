@@ -56,7 +56,7 @@
             <div class="intro-body-text">
                 <h1>Greenie and <span>Nature!</span></h1>
             </div>
-            <p>Trees are one of the greatest gift given us by nature. Trees have lots of importance
+            <p>Trees are one of the greatest gift given to us by nature. Trees have lots of importance
                 to humans and the world at large and we can not over emphasize how blessed we are to
                 have this nature's gift. Trees are very essential starting from its contribution to 
                 our environment by providing oxygen, improving air quality, climate amelioration, 
@@ -68,7 +68,7 @@
                 absorbs six tons of carbon dioxide and puts out four tons of oxygen. This is enough to
                 meet the annual needs of 18 people.” At <span> <b>GREENIE</b> </span> we educate and enlighten 
                 people about the importance of trees as they help absorb and sink the carbon that would
-                otherwise contribute to global heating. We inpire people to <span> <b> PLANT, NUTURE and 
+                otherwise contribute to global heating. We inspire people to <span> <b> PLANT, NUTURE and 
                 CELEBRATE </b> </span> 
                 trees.
             </p>
@@ -106,7 +106,7 @@
             <p>You can earn with <span><b>GREENIE</b></span>!. Yes, <b>GREENIE</b> is set at motivating you
                 by giving you the opportunity to earn as you plant. You just have to sign up and start 
                 planting. Make a 30 seconds video of you planting a tree in your area, showing your face
-                and boom your are set to <span><b>EARN!</b></span>. <span><b>GREENIE</b></span> sees you
+                and boom you are set to <span><b>EARN!</b></span>. <span><b>GREENIE</b></span> sees you
                 as an eligible earner when you have made at least five invites and have sold or purchased at least
                 a tree from our <span><b>TREE STORE.</b></span> Be part of this movement, get the priviledges that
                 comes with it and start earning.
@@ -142,6 +142,28 @@
             </div>
         </div>
     </section>
+    <!-- DONATION SECTION -->
+    <section class="don">
+        <div class="don-top">
+            <img src="img/donate.jpg" alt="">
+            <h1>DONATIONS</h1>
+        </div>
+        <p>Trees have supported and sustained life throughout our existence. They have a wide
+            variety of practical and commercial uses. Did you know the bark of some trees can
+            be made into cork and is a source of chemicals and medicines? Quinine and aspirin
+            are both made from bark extracts. The inner bark of some trees contains latex, the
+            main ingredient of rubber. How many more uses can you name?
+            That’s why the more trees are out there, the better. Unfortunately, as areas of 
+            forest the size of a football pitch are being lost every minute, we’re yet to get
+            to the right track when it comes to forest protection and management. It is so 
+            important that things go right. Support <b>GREENIE</b> by making donations today.
+            Let's get it right this time!. 
+        </p>
+        <div class="don-btn">
+            <a href="">DONATE NOW</a>
+        </div>
+    </section>
+
 
 
 
