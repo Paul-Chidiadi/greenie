@@ -51,7 +51,7 @@
         </div>
     </section>
     <!-- COMMUNITY SECTION -->
-    <section class="comm">
+    <section id="comm" class="comm">
         <img src="img/com.png" alt="">
         <div class="comm-body">
             <div class="comm-body-text">
@@ -71,7 +71,7 @@
         </div>
     </section>
     <!-- EARN SECTION -->
-    <section class="earn">
+    <section id="earn" class="earn">
         <div class="earn-body">
             <div class="earn-body-text">
                 <h1>Earn with Greenie <br><span>Did you know?</span></h1>
@@ -116,7 +116,7 @@
         </div>
     </section>
     <!-- STORE SECTION -->
-    <section class="store">
+    <section id="store" class="store">
         <h1><span>GREENIE</span> TREE STORE </h1>
         <p><b>GREENIE</b> Tree Store helps you find out more about different trees and enlightens you 
             about trees that best fits your region. At <b>GREENIE STORES</b> you can either sell a tree
