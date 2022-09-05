@@ -1,34 +1,7 @@
-  <?php include_once "head.php"?>
+  <?php include_once "include/head.php"?>
   <body>
     <!-- HEADER SECTION -->
-    <header class="header" id="header">
-        <nav class="navbar" id="navbar">
-            <a href="index.php">
-                <img class="logo" src="img/logo.png" alt="">
-            </a>
-            <div class="menu" id="menu">
-                <ul class="list">
-                    <li>
-                        <a href="#">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="#">COMMUNITY</a>
-                    </li>
-                    <li>
-                        <a href="#">DONATIONS</a>
-                    </li>
-                    <li>
-                        <a href="#">TREES</a>
-                    </li>
-                    <a  class="btn" href="#">SIGN UP</a>
-                </ul>
-            </div>
-            <div class="menubtn" id="menubtn">
-                <i class='bx bx-menu'></i>
-                <i class='bx bx-x'></i>
-            </div>
-        </nav>
-    </header>
+    <?php include_once "include/header.php"?>
     <!-- BODY SECTION -->
     <section class="top">
         <div class="top-body">
@@ -73,7 +46,7 @@
                 trees.
             </p>
             <div class="learn-body">
-                <a href="">LEARN MORE &#8594;</a>
+                <a href="about.php">LEARN MORE &#8594;</a>
             </div>
         </div>
     </section>
@@ -204,41 +177,8 @@
         </div>    
     </section>
     <!-- FOOTER SECTION -->
-    <footer class="footer">
-        <div class="divide">
-            <img height="50px" width="120px" style="object-fit: cover" src="img/logo.png" alt="">
-            <img height="50px" width="120px" style="object-fit: cover" src="img/logo2.png" alt="">
-        </div>
-        <h4>COPYRIGHT © Greenie <script>document.write(new Date().getFullYear());</script>. ALL RIGHTS RESERVED. </h4>
-        <hr><br>
-        <div class="foot">
-            <div class="container">
-                <h3>ACTION</h3><br>
-                <div> 
-                    <a href="">-DONATE NOW</a>
-                    <a href="">-TREE STORE</a>
-                    <a href="">-SIGN UP</a>
-                </div>
-            </div>
-            <div class="container">
-                <h3>QUICK LINKS</h3><br>
-                <div>
-                    <a href="">-ABOUT</a>
-                    <a href="">-COMMUNITY</a>
-                    <a href="">-DONATIONS</a>
-                    <a href="">-TREES</a>
-                </div>
-            </div>
-            <div class="container">
-                <h3>CONNECT</h3><br>
-                <div>
-                    <a href="">-CONTACT US</a>
-                    <p>-<i class="bx bx-phone-call"></i> +234 9091910918</p>
-                    <p>-<i class="bx bxs-envelope"></i> greenienature@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include_once "include/footer.php"?>
+
     <!-- javascript files and libraries -->
     <script type="text/javascript" src="js/index.js"></script>
   </body>
