@@ -9,7 +9,7 @@
                     <a href="about.php">ABOUT</a>
                 </li>
                 <li>
-                    <a href="#">COMMUNITY</a>
+                    <a href="comm.php">COMMUNITY</a>
                 </li>
                 <li>
                     <a href="#">DONATIONS</a>

@@ -149,6 +149,7 @@ body {
   margin-top: 65px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   animation: changepic 10s ease-in-out infinite 0s;
 }
 @keyframes changepic {
@@ -214,7 +215,7 @@ body {
 /* INTRO SECTION */
 .intro {
   width: 100%;
-  display: box;
+  display: block;
   padding: 60px 60px;
   background: var(--white);
 }
@@ -822,6 +823,7 @@ body {
   background-color: var(--blackd);
   padding: 40px 40px 30px;
   color: var(--blackl);
+  overflow: hidden;
 }
 .footer .divide {
   width: 100;
@@ -899,5 +901,55 @@ body {
   }
   .container div p {
     font-size: 12px;
+  }
+}
+
+/* COMM.PHP STYLING SECTION*/
+.intro .grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 30px auto;
+  overflow: hidden;
+}
+.intro .grid div {
+  width: 300px;
+  height: 320px;
+  overflow: hidden;
+  margin: 15px auto;
+  text-align: center;
+}
+.intro .grid div .image {
+  margin: 10px auto;
+  width: 90%;
+  height: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.intro .grid div .image.one {
+  background-image: url(../img/Get-Close.png);
+}
+.intro .grid div .image.two {
+  background-image: url(../img/chat.png);
+}
+.intro .grid div p {
+  height: 30%;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--greenl);
+  font-style: italic;
+  text-align: center;
+}
+/* COMM.PHP MEDIA QUERY SECTION */
+@media screen and (max-width: 700px) {
+  .intro .grid {
+    grid-template-columns: 1fr;
+    margin: 20px auto;
+  }
+  .intro .grid div {
+    width: 250px;
+    height: 290px;
   }
 }

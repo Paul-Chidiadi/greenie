@@ -67,7 +67,7 @@
                 Join our community today and help save the world and make it convenient for our children! 
                 BE a part of this movement now!
             </p>
-            <a href="">JOIN US <b>&#8594;</a>
+            <a href="comm.php">JOIN US <b>&#8594;</a>
         </div>
     </section>
     <!-- EARN SECTION -->

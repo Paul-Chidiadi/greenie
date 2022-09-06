@@ -18,7 +18,7 @@
             <h3>QUICK LINKS</h3><br>
             <div>
                 <a href="about.php">-ABOUT</a>
-                <a href="">-COMMUNITY</a>
+                <a href="comm.php">-COMMUNITY</a>
                 <a href="">-DONATIONS</a>
                 <a href="">-TREES</a>
             </div>
