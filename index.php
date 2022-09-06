@@ -131,7 +131,7 @@
         </div>
     </section>
     <!-- DONATION SECTION -->
-    <section class="don">
+    <section id="don" class="don">
         <div class="don-top">
             <img src="img/donate.jpg" alt="">
             <h1>DONATIONS</h1>
@@ -148,11 +148,11 @@
             Let's get it right this time!. 
         </p>
         <div class="don-btn">
-            <a href="">DONATE NOW</a>
+            <a href="donate.php">DONATE NOW</a>
         </div>
     </section>
     <!-- CONTACT SECTION -->
-    <section class="contact">
+    <section id="contact" class="contact">
         <h1>CONTACT <span>GREENIE</span> </h1>
         <div class="contain">
             <div class="info">

@@ -938,7 +938,7 @@ body {
   line-height: 20px;
   font-weight: 400;
   font-size: 11px;
-  color: var(--greenl);
+  color: var(--green);
   font-style: italic;
   text-align: center;
 }
@@ -951,5 +951,43 @@ body {
   .intro .grid div {
     width: 250px;
     height: 290px;
+  }
+}
+
+/* DONATE.PHP STYLING SECTION */
+.don.page {
+  background: var(--white);
+}
+.cover {
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.form.donate {
+  width: 100%;
+  padding: 15px;
+  background: var(--white);
+}
+.form.donate p {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--blackd);
+  text-align: center;
+  margin: 20px auto;
+}
+.form.donate p span {
+  color: var(--green);
+}
+/* DONATE.PHP MEDIA QUERY */
+@media screen and (max-width: 950px) {
+  .cover {
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .form.donate p {
+    font-size: 15px;
   }
 }

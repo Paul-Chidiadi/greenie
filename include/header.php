@@ -12,7 +12,7 @@
                     <a href="comm.php">COMMUNITY</a>
                 </li>
                 <li>
-                    <a href="#">DONATIONS</a>
+                    <a href="donate.php">DONATIONS</a>
                 </li>
                 <li>
                     <a href="#">TREES</a>

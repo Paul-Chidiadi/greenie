@@ -9,7 +9,7 @@
         <div class="container">
             <h3>ACTION</h3><br>
             <div> 
-                <a href="">-DONATE NOW</a>
+                <a href="index.php#don">-DONATE NOW</a>
                 <a href="">-TREE STORE</a>
                 <a href="">-SIGN UP</a>
             </div>
@@ -19,14 +19,14 @@
             <div>
                 <a href="about.php">-ABOUT</a>
                 <a href="comm.php">-COMMUNITY</a>
-                <a href="">-DONATIONS</a>
+                <a href="donate.php">-DONATIONS</a>
                 <a href="">-TREES</a>
             </div>
         </div>
         <div class="container">
             <h3>CONNECT</h3><br>
             <div>
-                <a href="">-CONTACT US</a>
+                <a href="index.php#contact">-CONTACT US</a>
                 <p>-<i class="bx bx-phone-call"></i> +234 9091910918</p>
                 <p>-<i class="bx bxs-envelope"></i> greenienature@gmail.com</p>
             </div>
