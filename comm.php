@@ -30,21 +30,6 @@
             <div class="intro-body-text">
                 <h1>Meet <span>Greenie</span> Community</h1>
             </div>
-            <!-- <div class="grid">
-                <div>
-                    <div class="image one"></div>
-                    <p>Yes! you can now get close to different people from different
-                        places  in Greenie community.
-                        
-                    </p>
-                </div>
-                <div>
-                    <div class="image two"></div>
-                    <p>You can likewise chat with people in the community, share
-                       ideas and thoughts together!  
-                    </p>
-                </div>
-            </div> -->
             <p>Get to meet with people in the community. The <span><b>GREENIE</b></span>  community is a group that is inpired 
                 by nature and motivates one another to plant trees and give back to nature. WE educate and
                 enlighten people on the importance and essence of planting trees and how it helps with 
@@ -59,8 +44,5 @@
     </section>
     <!-- FOOTER SECTION -->
     <?php include_once "include/footer.php"?>
-
-    <!-- javascript files and libraries -->
-    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>

@@ -33,3 +33,5 @@
         </div>
     </div>
 </footer>
+<!-- javascript files and libraries -->
+<script type="text/javascript" src="js/index.js"></script>

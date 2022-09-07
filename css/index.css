@@ -23,6 +23,9 @@
   --whited: #f7d7d7;
   --white: #fff;
 }
+html {
+  scroll-behavior: smooth;
+}
 input,
 button {
   border: none;
