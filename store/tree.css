@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;500;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Lato", "Roboto Slab", sans-serif;
+}
+:root {
+  /* green */
+  --green: #00b000;
+  --greend: #007500;
+  --greenl: #00e400;
+  --greens: #00ff70;
+  /* black */
+  --blackl: #8a8a8a;
+  --blackd: #2e2e2e;
+  --black: #000;
+  /* white */
+  --whitel: #dedcd5;
+  --whited: #f7d7d7;
+  --white: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
+input,
+button {
+  border: none;
+  outline: none;
+}
+body {
+  overflow-x: hidden;
+  background-color: var(--whitel);
+  letter-spacing: 0.5px;
+}
+
+/* HEADER SECTION */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  padding: 5px 8px;
+  z-index: 999;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 150px;
+  height: 50px;
+  object-fit: cover;
+}
+.menu {
+  display: block;
+  margin-right: 10px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.list li a {
+  color: var(--blackd);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+}
+.list li a:hover {
+  color: var(--green);
+}
+.list li a .cart {
+  width: 45px;
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+}
+.list li a .cart i {
+  font-size: 30px;
+  color: var(--greend);
+}
+.list li a .cart .top {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: var(--black);
+  background-color: var(--greenl);
+  position: absolute;
+  top: 0;
+  right: 2px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: down 2s ease-in 0s;
+  /* display: none; */
+}
+/* animation for cart top number */
+@keyframes down {
+  0% {
+    top: -50px;
+  }
+  20% {
+    top: -40px;
+  }
+  40% {
+    top: -30px;
+  }
+  60% {
+    top: -20px;
+  }
+  80% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.list li a .cart .top p {
+  font-size: 10px;
+  font-weight: bold;
+  font-family: monospace;
+}
+/* sell hover */
+.list .sell {
+  position: relative;
+}
+.list .sell .sale {
+  position: absolute;
+  left: -200%;
+  top: 120%;
+  width: 140px;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+  display: none;
+  transition: all 0.5s ease-in-out;
+  z-index: 9999;
+}
+.list .sell:hover .sale {
+  display: block;
+}
+.list .sell .sale p {
+  font-size: 12px;
+  color: var(--blackd);
+  font-weight: 400px;
+  line-height: 20px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+.list .sell .sale a {
+  background-color: var(--greend);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 10px;
+}
+/* media query for header section */
+@media screen and (max-width: 500px) {
+  .logo {
+    width: 90px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .list {
+    gap: 12px;
+  }
+  .list li a {
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  .list li a .cart i {
+    font-size: 22px;
+    color: var(--greend);
+  }
+  .list li a .cart .top {
+    width: 18px;
+    height: 18px;
+  }
+  .list li a .cart .top p {
+    font-size: 10px;
+    font-weight: bolder;
+  }
+}
