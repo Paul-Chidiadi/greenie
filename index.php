@@ -127,7 +127,7 @@
             never knew existed.
         </p>
         <div class="don-btn">
-            <a href="">Try Greenie Store</a>
+            <a href="store/tree.php">Try Greenie Store</a>
         </div>
     </section>
     <!-- DONATION SECTION -->
