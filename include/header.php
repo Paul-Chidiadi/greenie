@@ -15,7 +15,7 @@
                     <a href="donate.php">DONATIONS</a>
                 </li>
                 <li>
-                    <a href="store/tree.php">TREES</a>
+                    <a href="store/tree.php">STORE</a>
                 </li>
                 <a  class="btn" href="#">SIGN UP</a>
             </ul>

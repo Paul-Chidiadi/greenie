@@ -33,7 +33,7 @@ button {
 }
 body {
   overflow-x: hidden;
-  background-color: var(--whitel);
+  background-color: var(--white);
   letter-spacing: 0.5px;
 }
 
@@ -46,6 +46,7 @@ body {
   background-color: var(--white);
   padding: 5px 8px;
   z-index: 999;
+  border-bottom: 1px solid var(--whitel);
 }
 .navbar {
   display: flex;
@@ -157,8 +158,8 @@ body {
   text-align: center;
 }
 .list .sell .sale a {
-  background-color: var(--greend);
-  color: white;
+  background-color: var(--greens);
+  color: var(--black);
   font-size: 12px;
   font-weight: bold;
   border-radius: 5px;
@@ -190,5 +191,210 @@ body {
   .list li a .cart .top p {
     font-size: 10px;
     font-weight: bolder;
+  }
+}
+
+/* BODY SECTION */
+.body {
+  margin: 80px auto 20px;
+  width: 100%;
+  padding: 0px 30px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+/* goods section */
+.body .goods {
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+}
+.body .goods .rows {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+}
+.body .goods .rows .prod {
+  height: 200px;
+  margin: 0px 5px;
+  padding: 10px 0px;
+  position: relative;
+}
+.body .goods .rows .prod img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.body .goods .rows .prod p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--blackd);
+  padding-left: 5px;
+}
+.body .goods .rows .prod small {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  color: var(--green);
+  padding-left: 5px;
+}
+.body .goods .rows .prod a {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body .goods .rows .prod a i {
+  font-size: 20px;
+  color: var(--white);
+  transition: all 0.5s ease-in-out;
+}
+.body .goods .rows .prod a:hover i {
+  font-size: 40px;
+  color: var(--greens);
+}
+/* learn section */
+.body .learn {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+}
+.learn-top {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 10px auto;
+  padding: 10px 0px 15px;
+  border-bottom: 1px double var(--greend);
+}
+.learn-top h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--green);
+}
+.learn-top i {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--greenl);
+}
+.learn p {
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--blackd);
+  font-weight: 400;
+  text-align: justify;
+  padding: 5px;
+}
+.learn p span {
+  color: var(--green);
+}
+.learn form {
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.learn form .control {
+  height: 45px;
+  border-radius: 5px;
+  padding-left: 8px;
+  border: 0.5px solid var(--whited);
+}
+.learn form .control:hover {
+  border: 1px solid var(--greenl);
+}
+.learn form .btn {
+  font-family: "Lato", sans-serif;
+  background-color: var(--greens);
+  color: var(--black);
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px;
+  margin-left: 8px;
+}
+.learn form .btn:hover {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--greenl);
+}
+/* BODY MEDIA QUERY */
+@media screen and (max-width: 1100px) {
+  .body {
+    padding: 0px 20px;
+    grid-template-columns: 1fr;
+  }
+  /* goods section */
+  .body .goods {
+    padding: 10px;
+  }
+  .body .learn {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .body .goods .rows {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .body .goods .rows .prod {
+    height: 180px;
+  }
+  .body .goods .rows .prod p {
+    font-size: 11px;
+  }
+  .body .goods .rows .prod small {
+    font-size: 8px;
+  }
+  .body .goods .rows .prod a i {
+    font-size: 15px;
+  }
+  .body .goods .rows .prod a:hover i {
+    font-size: 30px;
+  }
+  .learn form .btn {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* learn section */
+  .learn-top h1 {
+    font-size: 20px;
+  }
+  .learn-top i {
+    font-size: 25px;
+  }
+  .learn p {
+    font-size: 10px;
+    line-height: 18px;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 400px) {
+  .body {
+    padding: 0px 5px;
+  }
+  .body .goods .rows .prod {
+    margin: 0px 2px;
+  }
+  /* goods section */
+  .body .goods {
+    padding: 0px;
   }
 }
