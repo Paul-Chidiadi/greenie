@@ -52,106 +52,45 @@
         <section class="body">
             <!-- goods section -->
             <div class="goods">
-                <div class="rows">
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
+                <!-- CART SECTION -->
+                <div class="carts">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>TREE</th>
+                                <th>Quantity</th>
+                                <th>AMOUNT</th>
+                                <th>R/A</th>
+                            </tr> 
+                        </thead>
+                        <tbody id="body">
+                            <!-- javaScript generated elements with data from IndexDB local storage database goes in here -->
+                        </tbody>
+                    </table>  
                 </div>
-                <div class="rows">
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
+                <div class="total">
+                    <table>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td id="sub">$0</td>
+                        </tr>
+                        <tr>
+                            <td>Tax</td>
+                            <td id="tax">$0</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td id="total">$0</td>
+                        </tr>
+                    </table>
                 </div>
+                <!-- checkout button -->
+                <form action="" method="post">
+                    <input type="submit" id="check" name="submit" class="botn" value="Proceed to checkout">
+                </form>
+
+                <!-- MORE PRODUCTS -->
+                <h5><i class='bx bxs-heart'></i> MORE TREES <i class='bx bxs-heart'></i></h5>
                 <div class="rows">
                     <div class="prod">
                         <img src="../img/plant.jpg" alt="">
@@ -314,9 +253,9 @@
                 </div>
             </div>
         </footer>
-        
+
         <!-- POPUP SECTION -->
-        <div id="pop" class="pop active">
+        <div id="pop" class="pop ">
             <div class="pop-body">
                 <img src="../img/plant.jpg" alt="">
                 <div class="details">
@@ -349,6 +288,7 @@
             </div>
         </div>
         <!-- Overlays on the background when pop up is active -->
-        <div id="overlay" class="active" ></div>
+        <div id="overlay" class="" ></div>
+        
     </body>
 </html>

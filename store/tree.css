@@ -653,3 +653,75 @@ body {
     color: var(--black);
   }
 }
+
+/* CART.PHP SECTION */
+.goods h5 {
+  text-align: center;
+  margin: 40px auto 10px;
+  width: 100%;
+  color: var(--greend);
+  font-size: 25px;
+  font-weight: 700;
+}
+.goods h5 i {
+  color: var(--greenl);
+  font-size: 15px;
+  font-weight: 700;
+}
+.carts {
+  width: 100%;
+  margin: 10px auto 20px;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.carts table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: scroll;
+}
+.carts table thead {
+  color: white;
+  background-color: var(--green);
+  font-size: 15px;
+  overflow: hidden;
+}
+.carts table thead th {
+  padding: 5px;
+  text-align: left;
+  overflow: hidden;
+}
+.carts table thead th:last-child {
+  text-align: center;
+}
+.total {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.total table {
+  border-top: 3px solid var(--green);
+  width: 100%;
+  max-width: 470px;
+  font-size: 13px;
+  font-weight: bold;
+}
+td:last-child {
+  text-align: right;
+}
+.botn {
+  background-color: var(--green);
+  display: block;
+  color: var(--black);
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 9px 30px;
+  margin: 20px auto 10px;
+  width: fit-content;
+  transition: 0.5s;
+}
+.botn:hover {
+  background-color: var(--greens);
+}
