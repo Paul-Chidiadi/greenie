@@ -142,6 +142,25 @@ body {
     justify-content: center;
   }
 }
+@media screen and (max-width: 500px) {
+  .header {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .logo {
+    width: 100px;
+    height: 45px;
+    object-fit: cover;
+  }
+  .list li a {
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  .menubtn i {
+    font-weight: bolder;
+    font-size: 28px;
+  }
+}
 /* TOP SECTION */
 .top {
   background-image: url(../img/bg.jpg);
