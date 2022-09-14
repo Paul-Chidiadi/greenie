@@ -315,5 +315,40 @@
             </div>
         </footer>
         
+        <!-- POPUP SECTION -->
+        <div id="pop" class="pop active">
+            <div class="pop-body">
+                <img src="../img/plant.jpg" alt="">
+                <div class="details">
+                    <h1>Neem Tree</h1>
+                    <h3>description Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Vel nobis cupiditate necessitatibus!
+                        Eius, rerum pariatur. Necessitatibus, ipsam, consectetur
+                        illo illum officiis repellat reprehenderit ea laborum corrupti,
+                        dicta culpa veritatis. Praesentium corporis veritatis minus
+                        necessitatibus, porro, qui minima temporibus tenetur, quibusdam
+                        fuga quos. Laboriosam maiores aut repellat facilis sequi quod ducimus
+                        natus odio ullam! Necessitatibus assumenda delectus ipsum magni, non
+                        quia corrupti provident nisi esse nihil. Quaerat doloremque cumque,
+                        esse, eos iure animi pariatur necessitatibus culpa doloribus ducimus
+                        cum nam sint quae fuga velit magnam. Explicabo impedit maiores beatae
+                        esse. Omnis, voluptates ab earum necessitatibus dolore consequatur
+                        voluptatem corrupti aspernatur illo laudantium. Sunt, vitae. Pariatur
+                        sapiente ipsa dolorem, sit temporibus possimus? Dolore cum eum adipisci
+                        eos quidem eligendi, reiciendis ad facilis ab fuga impedit consequatur
+                        autem id quod voluptatem aspernatur quam placeat esse tempore voluptatibus!
+                        Repellendus architecto neque sed accusantium fugiat aliquid nesciunt,
+                        perspiciatis ex porro adipisci magnam quas asperiores pariatur!
+                    </h3>
+                    <p>$200</p>
+                    <a href="" id="add">ADD TO CART</a>
+                </div>
+            </div>
+            <div class="cancelbtn" id="cancelbtn">
+                <i class='bx bx-x'></i>
+            </div>
+        </div>
+        <!-- Overlays on the background when pop up is active -->
+        <div id="overlay" class="active" ></div>
     </body>
 </html>
