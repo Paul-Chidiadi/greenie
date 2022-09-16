@@ -31,7 +31,7 @@
                             <div id="sale" class="sale">
                                 <p>Upload a tree you would want to sell at our store by joining our
                                 community.</p>
-                                <br><a href="#">SIGN UP NOW</a>
+                                <br><a href="../signup.php">SIGN UP NOW</a>
                             </div>
                         </li>
                         <li>
@@ -231,7 +231,7 @@
                     <div> 
                         <a href="../index.php#don">-DONATE NOW</a>
                         <a href="tree.php">-TREE STORE</a>
-                        <a href="">-SIGN UP</a>
+                        <a href="../signup.php">-SIGN UP</a>
                     </div>
                 </div>
                 <div class="container">

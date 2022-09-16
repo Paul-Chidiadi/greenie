@@ -27,7 +27,8 @@ html {
   scroll-behavior: smooth;
 }
 input,
-button {
+button,
+select {
   border: none;
   outline: none;
 }

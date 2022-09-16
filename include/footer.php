@@ -11,7 +11,7 @@
             <div> 
                 <a href="index.php#don">-DONATE NOW</a>
                 <a href="index.php#store">-TREE STORE</a>
-                <a href="">-SIGN UP</a>
+                <a href="signup.php">-SIGN UP</a>
             </div>
         </div>
         <div class="container">

@@ -31,7 +31,7 @@
                             <div id="sale" class="sale">
                                 <p>Upload a tree you would want to sell at our store by joining our
                                 community.</p>
-                                <br><a href="#">SIGN UP NOW</a>
+                                <br><a href="../signup.php">SIGN UP NOW</a>
                             </div>
                         </li>
                         <li>
@@ -292,7 +292,7 @@
                     <div> 
                         <a href="../index.php#don">-DONATE NOW</a>
                         <a href="tree.php">-TREE STORE</a>
-                        <a href="">-SIGN UP</a>
+                        <a href="../signup.php">-SIGN UP</a>
                     </div>
                 </div>
                 <div class="container">
@@ -316,7 +316,7 @@
         </footer>
         
         <!-- POPUP SECTION -->
-        <div id="pop" class="pop active">
+        <div id="pop" class="pop ">
             <div class="pop-body">
                 <img src="../img/plant.jpg" alt="">
                 <div class="details">
@@ -349,6 +349,6 @@
             </div>
         </div>
         <!-- Overlays on the background when pop up is active -->
-        <div id="overlay" class="active" ></div>
+        <div id="overlay" class="" ></div>
     </body>
 </html>

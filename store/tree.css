@@ -27,7 +27,8 @@ html {
   scroll-behavior: smooth;
 }
 input,
-button {
+button,
+select {
   border: none;
   outline: none;
 }
@@ -724,4 +725,157 @@ td:last-child {
 }
 .botn:hover {
   background-color: var(--greens);
+}
+
+/* SIGNUP LOGIN PAGE SECTION */
+.head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+.log {
+  font-family: "Lato", sans-serif;
+  background-color: var(--greens);
+  color: var(--black);
+  font-size: 13px;
+  font-weight: bolder;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 8px;
+}
+.log.btn {
+  margin-top: 20px;
+}
+.log:hover {
+  background-color: var(--greenl);
+  color: var(--black);
+}
+.log-body {
+  width: 100%;
+  height: 510px;
+}
+h6 {
+  font-size: 8px;
+  font-weight: bolder;
+  color: var(--blackl);
+  text-align: center;
+  padding: 30px 0px;
+}
+.log-body form {
+  width: 70%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.log-body form.login {
+  display: block;
+  width: 50%;
+}
+
+.log-body form .path {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+.log-body form .path section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+.log-body form .path section .show {
+  position: absolute;
+  top: 46px;
+  right: 15px;
+  transform: translateY(-50%);
+  width: fit-content;
+  height: fit-content;
+  color: var(--green);
+  font-size: 22px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.log-body form .path section .show .bxs-show {
+  display: none;
+}
+.log-body form .path div {
+  background-color: var(--whited);
+}
+.log-body form .path .forgot {
+  font-size: 10px;
+  font-weight: bolder;
+  color: var(--green);
+  text-align: center;
+  padding: 10px 0px;
+}
+.log-body form .path .forgot:hover {
+  font-size: 10.5px;
+}
+.log-body form .path label {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--green);
+  margin-bottom: 5px;
+  padding-left: 2px;
+}
+.log-body form .path .control {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  border-radius: 2px;
+  border: 1px solid var(--whited);
+  margin-bottom: 20px;
+}
+.log-body form .path .control.phone {
+  padding-left: 50px;
+}
+.log-body form .path .control.pass {
+  padding-right: 40px;
+}
+.log-body form .path .control:focus {
+  border: 1px solid var(--greenl);
+}
+/* LOGIN SIGNUP MEDIA QUERY */
+@media screen and (max-width: 800px) {
+  .log-body form {
+    width: 85%;
+  }
+  .log-body form.login {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .log-body {
+    width: 100%;
+    height: fit-content;
+  }
+  .log-body form {
+    width: 85%;
+    display: block;
+    position: static;
+    transform: none;
+    margin: 30px auto;
+    grid-template-columns: 1fr;
+    background-color: var(--black);
+  }
+  .log-body form.login {
+    display: block;
+    width: 85%;
+    margin: 70px auto;
+    background-color: var(--black);
+  }
+}
+@media screen and (max-width: 350px) {
+  .log-body form {
+    padding: 10px;
+  }
 }

@@ -17,7 +17,7 @@
                 <li>
                     <a href="store/tree.php">STORE</a>
                 </li>
-                <a  class="btn" href="#">SIGN UP</a>
+                <a  class="btn" href="signup.php">SIGN UP</a>
             </ul>
         </div>
         <div class="menubtn" id="menubtn">
