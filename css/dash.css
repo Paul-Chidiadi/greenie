@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;500;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  letter-spacing: 0.5px;
+  font-family: "Lato", "Roboto Slab", sans-serif;
+}
+:root {
+  /* green */
+  --green: #00b000;
+  --greend: #007500;
+  --greenl: #00e400;
+  --greens: #00ff70;
+  /* black */
+  --blackl: #8a8a8a;
+  --blackd: #2e2e2e;
+  --black: #000;
+  /* white */
+  --whitel: #dedcd5;
+  --whited: #f7d7d7;
+  --white: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
+input,
+button,
+select {
+  border: none;
+  outline: none;
+}
+body {
+  overflow-x: hidden;
+  background-color: var(--whitel);
+}
+/* WRAPPER */
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+/* SIDE BAR */
+.wrapper .sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  padding: 20px 10px;
+  background-color: var(--white);
+}
+.sidebar .logo {
+  width: 120px;
+  height: 50px;
+  object-fit: cover;
+  margin: 0px auto 10px;
+}
+.sidebar ul {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebar ul li {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0px 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 0px var(--greens);
+  transition: all 0.5s ease-in;
+}
+.sidebar ul li.active {
+  transform: translate(12px, 2px);
+  background-color: var(--greens);
+}
+.sidebar ul li.active i {
+  font-size: 28px;
+  color: var(--greend);
+}
+.sidebar ul li.active a {
+  color: var(--black);
+}
+.sidebar ul li:hover i {
+  font-size: 28px;
+  color: var(--green);
+}
+.sidebar ul li:hover a {
+  color: var(--greenl);
+}
+.sidebar ul li i {
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--greenl);
+}
+.sidebar ul li a {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 900;
+  font-size: 11px;
+  color: var(--green);
+}
+/* LOGOUT BTN */
+.sidebar ul .logg {
+  position: relative;
+  background-color: var(--greenl);
+  margin-top: 38px;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 8px 2px var(--blackd);
+  transition: all 0.5s ease-in;
+}
+.sidebar ul .logg i {
+  font-weight: 400;
+  font-size: 28px;
+  color: var(--white);
+}
+.sidebar ul .logg a {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--black);
+}
+.sidebar ul .logg .sale {
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  width: 250px;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+  display: none;
+  transition: all 0.5s ease-in-out;
+  z-index: 9999;
+}
+.sidebar ul .logg .sale.active {
+  display: block;
+}
+.sidebar ul .logg .sale p {
+  font-size: 12px;
+  color: var(--blackd);
+  font-weight: bold;
+  line-height: 20px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+.sidebar ul .logg .sale a {
+  background-color: var(--greens);
+  color: var(--black);
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 0px 5px;
+}
+/* MAIN CONTENT */
+.wrapper .main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-left: 250px;
+}
+.main header {
+  width: 100%;
+  background-color: wheat;
+}
+.main header p {
+  font-family: "Roboto Slab", sans-serif;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 15px 0px;
+  color: var(--blackd);
+}
+.main header p span {
+  color: var(--green);
+  font-family: "Roboto Slab", sans-serif;
+}
+.main .menu {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  font-size: 100px;
+  background-color: rgb(250, 250, 250);
+  display: none;
+}
+.main .menu.active {
+  display: block;
+}

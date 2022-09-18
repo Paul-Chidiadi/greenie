@@ -38,6 +38,8 @@
                     <input type="text" class="control" name="lname" placeholder="Last Name" required>
                     <Label>Email *</Label>
                     <input type="email" class="control" name="email" placeholder="Email" required>
+                    <Label>Referer *</Label>
+                    <input type="email" class="control" name="referer" placeholder="Referer  -optional-">
                 </div>
                 <div class="path">
                     <section>
