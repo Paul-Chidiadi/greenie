@@ -1,4 +1,10 @@
 const lists = document.querySelectorAll(".list");
+const loader = document.querySelector("#loader");
+
+//WEB preloader
+window.onload = () => {
+  loader.style.display = "none";
+};
 
 //Toggle for sidebar menus
 lists.forEach((item) => {
@@ -83,4 +89,40 @@ donate.onclick = () => {
   paymethodLayout.classList.remove("active");
   donateLayout.classList.add("active");
   console.log("good");
+};
+
+//COUNTRY CODE PICKER
+const phoneInputField = document.querySelector("#phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+  utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+//TOGGLE PASSWORD VIEW
+const pwdField = document.querySelector("form .path input[type='password']");
+const show = document.querySelector(".bxs-show");
+const hide = document.querySelector(".bxs-hide");
+const toggle = document.querySelector("#toggle");
+
+toggle.onclick = () => {
+  if (pwdField.type == "password") {
+    pwdField.type = "text";
+    show.style.display = "block";
+    hide.style.display = "none";
+  } else {
+    pwdField.type = "password";
+    show.style.display = "none";
+    hide.style.display = "block";
+  }
+};
+
+//COPY LINK TO CLIPBOARD
+const link = document.querySelector("#link");
+const copyBtn = document.querySelector("#copybtn");
+const reply = document.querySelector(".reply");
+copyBtn.onclick = () => {
+  navigator.clipboard.writeText(link.textContent);
+  reply.style.display = "block";
+  setInterval(() => {
+    reply.style.display = "none";
+  }, 3200);
 };
