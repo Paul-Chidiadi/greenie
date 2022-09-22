@@ -123,6 +123,110 @@
                 </section>
                 <!-- UPLOADS -->
                 <section id="upload" class="menu">
+                    <div class="uploads">
+                        <form action="" method="post">
+                            <div class="path">
+                                <Label>Post a Picture *</Label>
+                                <input type="file" class="control" name="picture" required>
+                                <input type="submit" class="log" name="upload" value="upload">
+                            </div>
+                            <div class="path">
+                                <Label>What's on your mind? *</Label>
+                                <textarea name="posttext" cols="30" rows="5" placeholder="What's on your mind" required></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="prev">
+                        <h1>UPLOADS</h1>
+                        <div class="items">
+                            <div class="rows">
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                                <div class="prod">
+                                    <img src="img/earn.jpg" alt="">
+                                    <a target="_blank" href="img/earn.jpg" class="click">
+                                        <i >view</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <!-- MEET -->
                 <section id="meet" class="menu">meet</section>
