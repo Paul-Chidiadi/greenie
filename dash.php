@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=900px, initial-scale=1.0">
+        <meta name="viewport" content="width=1200px">
         <title>GREENIE DASHBOARD</title>
 
         <!--MAin CSS file-->
@@ -208,13 +208,13 @@
                 <section id="meet" class="menu">
                     <div class="events">
                         <div class="col one">
-                            <h1>Events <i class='bx bxs-calendar-event'></i></h1><hr>
+                            <h1>Events <i class='bx bxs-calendar-event'></i></h1>
                             <p>You have no events yet. Subscribe to our news letter to
                                 get regular updates about our upcoming events from <b>GREENIE</b>.
                             </p>
                         </div>
                         <div class="col two">
-                            <h1>Loyalties <i class='bx bxs-gift'></i></h1><hr>
+                            <h1>Loyalties <i class='bx bxs-gift'></i></h1>
                             <p>Loyalties are treats made to members of the greenie community 
                                after their first earnings. <b>GREENIE</b> will notify you as soon as
                                you are eligible for this treat.
@@ -357,7 +357,48 @@
                     </section>
                 </section>
                 <!-- TREES -->
-                <section id="trees" class="menu">trees</section>
+                <section id="trees" class="menu">
+                    <div class="data">
+                        <div class="col">
+                            <h2>DATA <i class='bx bx-right-arrow-alt'></i></h2>
+                        </div>
+                        <div class="col">
+                            <span>0</span>
+                            <h1>TREES SOLD</h1>
+                        </div>
+                        <div class="col">
+                            <span>0</span>
+                            <h1>TREES POSTED FOR SALE</h1>
+                        </div>
+                        <div class="col">
+                            <span>0</span>
+                            <h1>TREES BOUGHT</h1>
+                        </div>
+                        <div class="col side">
+                            <p>Hey there!, you can buy trees from greenie stores by clicking
+                                <a href="store/tree.php" target="_blank">Greenie Tree Store.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- SELL TREE SECTION -->
+                    <div class="make-sales">
+                        <form action="" method="post">
+                            <div class="path">
+                                <Label>Tree Name *</Label>
+                                <input type="text" class="control" name="treename" placeholder="Tree name" required>
+                                <Label>Tree Price *</Label>
+                                <input type="number" class="control" name="treeprice" min="0" placeholder="Tree price" required>
+                                <Label>Tree Image *</Label>
+                                <input type="file" class="control" name="treeimage" required>
+                            </div>
+                            <div class="path">
+                                <Label>Features *</Label>
+                                <textarea name="treefeatures" cols="30" rows="8" placeholder="Features and Description" required></textarea>
+                                <input type="submit" class="log" name="submit" value="UPLOAD TO SELL NOW">
+                            </div>
+                        </form>
+                    </div>
+                </section>
                 <!-- PAY METHOD -->
                 <section id="paymethod" class="menu">paymethod</section>
                 <!-- DONATE -->

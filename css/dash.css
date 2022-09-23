@@ -28,6 +28,12 @@ html {
   scroll-behavior: smooth;
 }
 input,
+select,
+textarea {
+  font-weight: 100;
+  font-family: "Roboto Slab", sans-serif;
+}
+input,
 button,
 select,
 textarea {
@@ -468,8 +474,6 @@ body {
 .uploads form .path textarea {
   width: 100%;
   font-size: 13px;
-  font-weight: 100;
-  font-family: "Roboto Slab", sans-serif;
   padding: 8px;
   border-radius: 2px;
   border: 1px solid var(--whited);
@@ -551,9 +555,11 @@ body {
   padding: 20px 5px;
 }
 .events .col.one {
-  border-right: 1px solid var(--green);
+  border-right: 1px solid var(--whited);
 }
 .events .col h1 {
+  width: 100%;
+  border-bottom: 1px solid var(--whited);
   font-family: "Roboto Slab", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -572,7 +578,7 @@ body {
   font-weight: 400;
   font-size: 11px;
   line-height: 20px;
-  color: var(--blackd);
+  color: var(--blackl);
   padding: 8px;
   margin-top: 10px;
   text-align: center;
@@ -787,8 +793,6 @@ body {
   width: calc(100% - 60px);
   height: 41px;
   padding: 0 15px;
-  font-family: "Roboto Slab", sans-serif;
-  font-weight: 100;
   font-size: 12px;
   border-radius: 5px 0 0 5px;
   border: 1px solid var(--whited);
@@ -803,4 +807,118 @@ body {
 }
 .chat-area .typing-area button i {
   font-size: 25px;
+}
+/* TREES SECTION STYLING */
+.data {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  box-shadow: 0 0 5px 0 var(--whited);
+  padding: 5px 0px;
+  border-radius: 6px;
+}
+.data .col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0px;
+  border-right: 1px solid var(--green);
+}
+.data .col.side {
+  border: none;
+}
+.data .col h1 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--greend);
+}
+.data .col h2 {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--greend);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.data .col h2 i {
+  font-size: 25px;
+  color: var(--green);
+}
+.data .col span {
+  text-align: center;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--greenl);
+}
+.data .col p {
+  text-align: center;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--green);
+  padding: 0px 20px;
+}
+.data .col p a {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--greens);
+}
+/* SELL TREE SECTION */
+.make-sales {
+  width: 100%;
+}
+.make-sales form {
+  width: 100%;
+  padding: 30px 0px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.make-sales form .path {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+.make-sales form .path label {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--green);
+  margin-bottom: 5px;
+  padding-left: 2px;
+}
+.make-sales form .path .control {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  border-radius: 2px;
+  border: 1px solid var(--whited);
+  background-color: var(--white);
+  margin-bottom: 20px;
+}
+.make-sales form .path .control:focus {
+  border: 1px solid var(--greenl);
+}
+.make-sales form .path textarea {
+  width: 100%;
+  font-size: 13px;
+  padding: 8px;
+  border-radius: 2px;
+  border: 1px solid var(--whited);
+  background-color: var(--white);
+  margin-bottom: 10px;
+}
+.make-sales form .path textarea::placeholder {
+  font-size: 13px;
+}
+.make-sales form .path textarea:focus {
+  border: 1px solid var(--greenl);
 }
