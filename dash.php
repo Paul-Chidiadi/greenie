@@ -387,20 +387,86 @@
                                 <Label>Tree Name *</Label>
                                 <input type="text" class="control" name="treename" placeholder="Tree name" required>
                                 <Label>Tree Price *</Label>
-                                <input type="number" class="control" name="treeprice" min="0" placeholder="Tree price" required>
+                                <input type="number" class="control" name="treeprice" min="0" placeholder="Tree price --(note that all transactions are in dollar)--" required>
                                 <Label>Tree Image *</Label>
                                 <input type="file" class="control" name="treeimage" required>
                             </div>
                             <div class="path">
                                 <Label>Features *</Label>
                                 <textarea name="treefeatures" cols="30" rows="8" placeholder="Features and Description" required></textarea>
-                                <input type="submit" class="log" name="submit" value="UPLOAD TO SELL NOW">
+                                <input type="submit" class="log" name="sale" value="UPLOAD TO SELL NOW">
                             </div>
                         </form>
                     </div>
                 </section>
                 <!-- PAY METHOD -->
-                <section id="paymethod" class="menu">paymethod</section>
+                <section id="paymethod" class="menu">
+                    <div class="data">
+                        <div class="col">
+                            <h2>DATA <i class='bx bx-right-arrow-alt'></i></h2>
+                        </div>
+                        <div class="col">
+                            <span>0</span>
+                            <h1>TOTAL EARNINGS</h1>
+                        </div>
+                        <div class="col">
+                            <span>0</span>
+                            <h1>CURRENT EARNINGS</h1>
+                        </div>
+                        <div class="col">
+                            <span>0</span>
+                            <h1>WITHDRAWALS</h1>
+                        </div>
+                        <div class="col side">
+                            <p>Hey there! Please note that your withdrawal may take sometime. If you
+                                don't get your funds after 24hrs, please do contact support or write
+                                a mail to Greenie.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- WITHDRAW SECTION -->
+                    <div class="withdraw">
+                        <form action="" method="post">
+                            <div class="path">
+                                <Label>Amount *</Label>
+                                <input type="number" class="control" name="amount" min="0" placeholder="Withdraw amount --(note that all transactions are in dollar)--" required>
+                            </div>
+                            <input type="submit" class="log" name="withdraw" value="WITHDRAW">
+                        </form>
+                    </div>
+                    <!-- CHOOSE SECTION -->
+                    <h1 class="select" >Select your prefered payment method</h1>
+                    <div class="choose">
+                        <form action="" method="post">
+                            <div class="path">
+                                <input type="hidden" class="control" name="paymethod" value="Bitcoin" required>
+                                <Label>BITCOIN *</Label>
+                                <input type="text" class="control" name="walletadd"  placeholder="Wallet Address" required>
+                                <input type="submit" class="log" name="choose" value="OKAY">
+                            </div>
+                        </form>
+                        <form action="" method="post">
+                            <div class="path">
+                                <input type="hidden" class="control" name="paymethod" value="Bank" required>
+                                <Label>Bank Name *</Label>
+                                <input type="text" class="control" name="bankname" placeholder="Bank Name" required>
+                                <Label>Account Name *</Label>
+                                <input type="text" class="control" name="accname" placeholder="Account Name" required>
+                                <Label>Account Number *</Label>
+                                <input type="text" class="control" name="accnumber" placeholder="Account Number" required>
+                                <input type="submit" class="log" name="choose" value="OKAY">
+                            </div>
+                        </form>
+                        <form action="" method="post">
+                            <div class="path">
+                                <input type="hidden" class="control" name="paymethod" value="Etherum" required>
+                                <Label>ETHERUM *</Label>
+                                <input type="text" class="control" name="walletadd"  placeholder="Wallet Address" required>
+                                <input type="submit" class="log" name="choose" value="OKAY">
+                            </div>
+                        </form>
+                    </div>
+                </section>
                 <!-- DONATE -->
                 <section id="donate" class="menu">donate</section>
             </div>
