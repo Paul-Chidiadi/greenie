@@ -104,7 +104,7 @@
                     </div>
                     <div class="infos">
                         <div class="part earn">
-                            <h1>EARNINGS <span> 0</span></h1>
+                            <h1>Earnings <span> 0</span></h1>
                             <p> <span>HOW TO EARN</span><br> Make a 30 seconds video of you planting a tree in your area, showing your face
                                 and you are set to earn. GREENIE sees you as an eligible earner when you have made at least five invites
                                 and have sold or purchased at least a tree from our <a target="_blank" href="store/tree.php">TREE STORE</a>.
@@ -112,7 +112,7 @@
                             </p>
                         </div>
                         <div class="part invite">
-                            <h1>INVITES <span> 0</span></h1>
+                            <h1>Invites <span> 0</span></h1>
                             <p>Invite people to join this community with your link below<br><br>
                                 <span id="link">greenie.com/signup.php?johndoe@gmail.com</span>
                                 <button class="log" id="copybtn">COPY</button>
@@ -200,36 +200,162 @@
                                         <i >view</i>
                                     </a>
                                 </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- MEET -->
-                <section id="meet" class="menu">meet</section>
+                <section id="meet" class="menu">
+                    <div class="events">
+                        <div class="col one">
+                            <h1>Events <i class='bx bxs-calendar-event'></i></h1><hr>
+                            <p>You have no events yet. Subscribe to our news letter to
+                                get regular updates about our upcoming events from <b>GREENIE</b>.
+                            </p>
+                        </div>
+                        <div class="col two">
+                            <h1>Loyalties <i class='bx bxs-gift'></i></h1><hr>
+                            <p>Loyalties are treats made to members of the greenie community 
+                               after their first earnings. <b>GREENIE</b> will notify you as soon as
+                               you are eligible for this treat.
+                            </p>
+                        </div>
+                    </div>
+                    <section class="users">
+                        <!-- USERS LIST AREA COL ONE -->
+                        <div class="col one">
+                            <div class="search">
+                                <span class="text">Select a user to chat</span>
+                                <input type="text" placeholder="Enter name to search...">
+                                <button> <i class="bx bx-search"></i> </button>
+                            </div>
+                            <div class="users-list">
+                                <a href="#">
+                                    <div class="content">
+                                        <img src="/img/celebrate.jpg" alt="">
+                                        <div class="details">
+                                            <span>John Doe</span>
+                                            <p>This is a test message</p>
+                                        </div>
+                                    </div>
+                                    <div class="status"> <i class="bx bxs-circle"></i> </div>
+                                </a>
+                                <a href="#">
+                                    <div class="content">
+                                        <img src="/img/celebrate.jpg" alt="">
+                                        <div class="details">
+                                            <span>John Doe</span>
+                                            <p>This is a test message</p>
+                                        </div>
+                                    </div>
+                                    <div class="status"> <i class="bx bxs-circle"></i> </div>
+                                </a>
+                                <a href="#">
+                                    <div class="content">
+                                        <img src="/img/celebrate.jpg" alt="">
+                                        <div class="details">
+                                            <span>John Doe</span>
+                                            <p>This is a test message</p>
+                                        </div>
+                                    </div>
+                                    <div class="status"> <i class="bx bxs-circle"></i> </div>
+                                </a>
+                                <a href="#">
+                                    <div class="content">
+                                        <img src="/img/celebrate.jpg" alt="">
+                                        <div class="details">
+                                            <span>John Doe</span>
+                                            <p>This is a test message</p>
+                                        </div>
+                                    </div>
+                                    <div class="status"> <i class="bx bxs-circle"></i> </div>
+                                </a>
+                                <a href="#">
+                                    <div class="content">
+                                        <img src="/img/celebrate.jpg" alt="">
+                                        <div class="details">
+                                            <span>John Doe</span>
+                                            <p>This is a test message</p>
+                                        </div>
+                                    </div>
+                                    <div class="status"> <i class="bx bxs-circle"></i> </div>
+                                </a>
+                                <a href="#">
+                                    <div class="content">
+                                        <img src="/img/celebrate.jpg" alt="">
+                                        <div class="details">
+                                            <span>John Doe</span>
+                                            <p>This is a test message</p>
+                                        </div>
+                                    </div>
+                                    <div class="status"> <i class="bx bxs-circle"></i> </div>
+                                </a>
+                                <a href="#">
+                                    <div class="content">
+                                        <img src="/img/celebrate.jpg" alt="">
+                                        <div class="details">
+                                            <span>John Doe</span>
+                                            <p>This is a test message</p>
+                                        </div>
+                                    </div>
+                                    <div class="status"> <i class="bx bxs-circle"></i> </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- USERS CHAT AREA COL TWO -->
+                        <div class="col two">
+                            <div class="chat-area">
+                                <header>
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                    <img src="/img/celebrate.jpg" alt="">
+                                    <div class="details">
+                                        <span>John Doe</span>
+                                        <p>Active now</p>
+                                    </div>
+                                </header>
+                                <div class="chat-box">
+                                    <div class="chat outgoing">
+                                        <div class="details">
+                                            <p>Lorem ipsum dolor sit amet ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat incoming">
+                                        <img src="/img/celebrate.jpg" alt="">
+                                        <div class="details">
+                                            <p>Lorem ipsum dolor sit amet ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat outgoing">
+                                        <div class="details">
+                                            <p>Lorem ipsum dolor sit amet ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat incoming">
+                                        <img src="/img/celebrate.jpg" alt="">
+                                        <div class="details">
+                                            <p>Lorem ipsum dolor sit amet ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat outgoing">
+                                        <div class="details">
+                                            <p>Lorem ipsum dolor sit amet ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat incoming">
+                                        <img src="/img/celebrate.jpg" alt="">
+                                        <div class="details">
+                                            <p>Lorem ipsum dolor sit amet ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form action="" method="post" class="typing-area">
+                                    <input type="text" placeholder="Type a message here...">
+                                    <button> <i class="bx bx-right-arrow-alt"></i> </button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </section>
                 <!-- TREES -->
                 <section id="trees" class="menu">trees</section>
                 <!-- PAY METHOD -->

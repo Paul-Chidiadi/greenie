@@ -340,9 +340,9 @@ body {
   grid-template-columns: 1fr;
   padding: 10px 10px 12px;
   background-color: var(--white);
-  border-radius: 10px;
+  border-radius: 2px;
   position: relative;
-  box-shadow: 0 0 5px 0px var(--blackl);
+  box-shadow: 0 0 1px 0px var(--blackl);
   border-left: 30px solid var(--greens);
 }
 .infos .part.invite {
@@ -355,6 +355,7 @@ body {
   font-weight: bold;
   color: var(--blackd);
   text-align: center;
+  border-bottom: 1px solid var(--whitel);
 }
 .infos .part h1 span {
   width: 100%;
@@ -366,10 +367,11 @@ body {
 }
 .infos .part p {
   width: 100%;
-  font-size: 12px;
+  font-size: 10px;
   font-family: "Roboto Slab", sans-serif;
-  font-weight: 100;
+  font-weight: bold;
   color: var(--blackd);
+  line-height: 20px;
   text-align: center;
   position: relative;
 }
@@ -412,7 +414,7 @@ body {
 }
 .infos .part p span {
   width: 100%;
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Lato", sans-serif;
   font-weight: bold;
   color: var(--green);
@@ -499,7 +501,7 @@ body {
   grid-template-columns: repeat(6, 1fr);
   margin-bottom: 10px;
   border-radius: 5px;
-  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1px 0px var(--blackl);
 }
 .prev .items .rows::-webkit-scrollbar {
   width: 0px;
@@ -534,4 +536,271 @@ body {
 .prev .items .rows .prod a:hover i {
   font-size: 15px;
   color: var(--greens);
+}
+/* MEET SECTION */
+.events {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 5px 0px var(--greens);
+}
+.events .col {
+  width: 100%;
+  padding: 20px 5px;
+}
+.events .col.one {
+  border-right: 1px solid var(--green);
+}
+.events .col h1 {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding-left: 5px;
+  color: var(--green);
+}
+.events .col h1 i {
+  font-size: 25px;
+  color: var(--greenl);
+}
+.events .col hr {
+  color: var(--green);
+}
+.events .col p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 20px;
+  color: var(--blackd);
+  padding: 8px;
+  margin-top: 10px;
+  text-align: center;
+}
+/* USERS LIST AREA COL ONE */
+.users {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  box-shadow: 0 0 5px 0px var(--greens);
+  border-radius: 8px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.users .col {
+  width: 100%;
+}
+.users .col.one {
+  border-right: 1px solid var(--whited);
+  padding-right: 15px;
+}
+.users .col.two {
+  padding-left: 15px;
+}
+.users .col .search {
+  width: 100%;
+  margin: 15px 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.users .col .search .text {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--green);
+}
+.users .col .search input {
+  position: absolute;
+  width: calc(100% - 60px);
+  height: 45px;
+  padding: 0 15px;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid var(--whited);
+}
+.users .col .search button {
+  width: 57px;
+  height: 45px;
+  background-color: var(--green);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.users .col .search button i {
+  font-size: 25px;
+  color: var(--white);
+  cursor: pointer;
+  font-weight: bold;
+}
+.users-list {
+  height: 310px;
+  overflow-y: auto;
+}
+.users-list::-webkit-scrollbar {
+  width: 0px;
+}
+.users-list a {
+  width: 100%;
+  padding: 10px 8px 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--whitel);
+}
+.users-list a:last-child {
+  border: none;
+  padding-bottom: 2px;
+}
+.users-list a .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.users-list a .content img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.users-list a .content .details span {
+  font-size: 12px;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: bold;
+  color: var(--blackd);
+}
+.users-list a .content .details p {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--blackl);
+  padding-top: 8px;
+}
+.users-list a .status i {
+  font-size: 15px;
+  color: var(--greenl);
+}
+.users-list a .status i.offline {
+  font-size: 15px;
+  color: var(--whitel);
+}
+/* USERS CHAT AREA COL TWO */
+.chat-area {
+  width: 100%;
+}
+.chat-area header {
+  width: 100%;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-radius: 5px 5px 0 0;
+  background-color: transparent;
+}
+.chat-area header i {
+  font-size: 30px;
+  color: var(--green);
+}
+.chat-area header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.chat-area header .details span {
+  font-size: 13px;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: bold;
+  color: var(--blackd);
+}
+.chat-area header .details p {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--blackl);
+  padding-top: 2px;
+}
+.chat-box {
+  overflow-y: auto;
+  width: 100%;
+  height: 270px;
+  padding: 5px 10px;
+  box-shadow: inset 0px 0px 3px 0px var(--blackl);
+}
+.chat-box::-webkit-scrollbar {
+  width: 0px;
+}
+.chat-box .chat {
+  margin: 15px 0px;
+}
+.chat-box .chat p {
+  padding: 8px 17px;
+  word-wrap: break-word;
+  font-size: 11px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  box-shadow: 0px 0px 7px 0px var(--blackl);
+}
+.chat-box .outgoing {
+  display: flex;
+}
+.outgoing .details {
+  margin-left: auto;
+  max-width: calc(100% - 200px);
+}
+.outgoing .details p {
+  background-color: var(--greenl);
+  color: var(--blackd);
+  border-radius: 10px 10px 0px 10px;
+}
+.chat-box .incoming {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+.chat-box .incoming img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.incoming .details {
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100% - 200px);
+}
+.incoming .details p {
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 10px 10px 10px 0px;
+}
+.chat-area .typing-area {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat-area .typing-area input {
+  width: calc(100% - 60px);
+  height: 41px;
+  padding: 0 15px;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid var(--whited);
+}
+.chat-area .typing-area button {
+  width: 57px;
+  height: 43px;
+  border-radius: 0px 5px 5px 0;
+  background-color: var(--greenl);
+  color: var(--white);
+  cursor: pointer;
+}
+.chat-area .typing-area button i {
+  font-size: 25px;
 }
