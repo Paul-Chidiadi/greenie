@@ -53,8 +53,40 @@ body {
   background-size: 4%;
   z-index: 1000;
 }
+.screen-info {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  #loader {
+    background-size: 12%;
+  }
+  .screen-info {
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px var(--blackd);
+    padding: 15px;
+    background: var(--greens);
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .screen-info p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--black);
+    word-wrap: break-word;
+  }
+}
 /* WRAPPER */
 .wrapper {
+  position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -812,10 +844,13 @@ body {
 .data {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   box-shadow: 0 0 5px 0 var(--whited);
   padding: 5px 0px;
   border-radius: 6px;
+}
+#trees .data {
+  grid-template-columns: repeat(5, 1fr);
 }
 .data .col {
   width: 100%;
@@ -927,7 +962,7 @@ body {
 }
 .withdraw form {
   width: 100%;
-  padding: 15px 10px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   gap: 25px;
@@ -960,7 +995,7 @@ body {
 .select {
   width: 100%;
   font-size: 15px;
-  font-weight: 500px;
+  font-weight: 500;
   font-family: "Roboto Slab", sans-serif;
   color: var(--blackd);
   padding: 0px 0px 10px;
@@ -1004,5 +1039,41 @@ body {
   margin-bottom: 10px;
 }
 .choose form .path .control:focus {
+  border: 1px solid var(--greenl);
+}
+/* DONATE SECTION STYLING */
+.donation {
+  width: 100%;
+}
+.donation form {
+  width: 100%;
+  padding: 0px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.donation form .path {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+.donation form .path label {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--green);
+  margin-bottom: 5px;
+  padding-left: 2px;
+}
+.donation form .path .control {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  border-radius: 2px;
+  border: 1px solid var(--whited);
+  background-color: var(--white);
+  margin-bottom: 20px;
+}
+.donation form .path .control:focus {
   border: 1px solid var(--greenl);
 }

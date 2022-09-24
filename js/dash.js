@@ -126,3 +126,9 @@ copyBtn.onclick = () => {
     reply.style.display = "none";
   }, 3200);
 };
+
+//Make screen information hide after 10s
+const screenInfo = document.querySelector(".screen-info");
+setInterval(() => {
+  screenInfo.style.display = "none";
+}, 10000);

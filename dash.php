@@ -25,6 +25,10 @@
         <div id="loader"></div>
         <!-- WRAPPER -->
         <div class="wrapper">
+            <!-- SCREEN INFO -->
+            <div class="screen-info">
+                <p>This page is best viewed in desktop mode. We suggest you use a PC preferrably</p>
+            </div>
             <!-- SIDEBAR -->
             <div class="sidebar">
                 <img class="logo" src="img/logo.png" alt="">
@@ -417,6 +421,10 @@
                             <span>0</span>
                             <h1>WITHDRAWALS</h1>
                         </div>
+                        <div class="col">
+                            <span>0</span>
+                            <h1>DONATIONS</h1>
+                        </div>
                         <div class="col side">
                             <p>Hey there! Please note that your withdrawal may take sometime. If you
                                 don't get your funds after 24hrs, please do contact support or write
@@ -468,7 +476,28 @@
                     </div>
                 </section>
                 <!-- DONATE -->
-                <section id="donate" class="menu">donate</section>
+                <section id="donate" class="menu">
+                    <div class="donation">
+                        <form action="" method="post">
+                            <div class="path">
+                                <Label>Name *</Label>
+                                <input type="text" class="control" name="name" placeholder="Name" required>
+                                <Label>Address *</Label>
+                                <input type="text" class="control" name="address" placeholder="Address" required>
+                                <Label>Email *</Label>
+                                <input type="email" class="control" name="email" placeholder="Email" required>
+                                <Label>City *</Label>
+                                <input type="text" class="control" name="city" placeholder="City" required>
+                            </div>
+                            <div class="path">
+                                <?php include "include/country.php"?>
+                                <Label>Amount *</Label>
+                                <input type="number" class="control" min="0" name="amount" placeholder="Amount --(all transactions are in dollar)--" required>
+                                <input type="submit" class="log" name="donate" value="Donate Now">
+                            </div>
+                        </form>
+                    </div>
+                </section>
             </div>
         </div>
         
