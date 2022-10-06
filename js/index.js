@@ -49,7 +49,6 @@ $(document).ready(function () {
     e.preventDefault();
   });
   $("#sendBtn").on("click", function () {
-    console.log("correct");
     let name = $("#name").val();
     let email = $("#email").val();
     let subject = $("#subject").val();

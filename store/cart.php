@@ -1,3 +1,6 @@
+<?php
+    include '../include/conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -93,106 +96,43 @@
                 <!-- MORE PRODUCTS -->
                 <h5><i class='bx bxs-heart'></i> MORE TREES <i class='bx bxs-heart'></i></h5>
                 <div class="rows">
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
+                    <?php
+                        $sql = $conn->query("SELECT * FROM treestore LIMIT 6 OFFSET 3");
+                        if($sql->num_rows > 0) {
+                            while($data = $sql->fetch_array()) {
+                            echo "
+                                <div class='prod'>
+                                    <img src='". $data['treeImage']. "'>
+                                    <p>". $data['treeName']. "</p>
+                                    <small>". $data['treePrice']. "</small>
+                                    <a href='cart.php?id=". $data['id']. "' class='click'>
+                                        <i class='bx bxs-heart'></i>
+                                    </a>
+                                </div>
+                            ";
+                            }
+                        }
+                    ?>
                 </div>
                 <div class="rows">
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
-                    <div class="prod">
-                        <img src="../img/plant.jpg" alt="">
-                        <p>Neem Tree</p>
-                        <small>$200</small>
-                        <a href="#" class="click">
-                            <i class='bx bxs-heart'></i>
-                        </a>
-                    </div>
+                    <?php
+                        $sql = $conn->query("SELECT * FROM treestore LIMIT 6 OFFSET 9");
+                        if($sql->num_rows > 0) {
+                            while($data = $sql->fetch_array()) {
+                            echo "
+                                <div class='prod'>
+                                    <img src='". $data['treeImage']. "'>
+                                    <p>". $data['treeName']. "</p>
+                                    <small>". $data['treePrice']. "</small>
+                                    <a href='cart.php?id=". $data['id']. "' class='click'>
+                                        <i class='bx bxs-heart'></i>
+                                    </a>
+                                </div>
+                            ";
+                            }
+                        }
+                    ?>
                 </div>
-                
             </div>
             <!-- learn section -->
             <div class="learn">
@@ -256,49 +196,51 @@
         </footer>
 
         <!-- POPUP SECTION -->
-        <div id="pop" class="pop ">
-            <div class="pop-body">
-                <img src="../img/plant.jpg" alt="">
-                <div class="details">
-                    <h1>Neem Tree</h1>
-                    <h3>description Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Vel nobis cupiditate necessitatibus!
-                        Eius, rerum pariatur. Necessitatibus, ipsam, consectetur
-                        illo illum officiis repellat reprehenderit ea laborum corrupti,
-                        dicta culpa veritatis. Praesentium corporis veritatis minus
-                        necessitatibus, porro, qui minima temporibus tenetur, quibusdam
-                        fuga quos. Laboriosam maiores aut repellat facilis sequi quod ducimus
-                        natus odio ullam! Necessitatibus assumenda delectus ipsum magni, non
-                        quia corrupti provident nisi esse nihil. Quaerat doloremque cumque,
-                        esse, eos iure animi pariatur necessitatibus culpa doloribus ducimus
-                        cum nam sint quae fuga velit magnam. Explicabo impedit maiores beatae
-                        esse. Omnis, voluptates ab earum necessitatibus dolore consequatur
-                        voluptatem corrupti aspernatur illo laudantium. Sunt, vitae. Pariatur
-                        sapiente ipsa dolorem, sit temporibus possimus? Dolore cum eum adipisci
-                        eos quidem eligendi, reiciendis ad facilis ab fuga impedit consequatur
-                        autem id quod voluptatem aspernatur quam placeat esse tempore voluptatibus!
-                        Repellendus architecto neque sed accusantium fugiat aliquid nesciunt,
-                        perspiciatis ex porro adipisci magnam quas asperiores pariatur!
-                    </h3>
-                    <p>$200</p>
-                    <a href="" id="add">ADD TO CART</a>
-                </div>
-            </div>
-            <div class="cancelbtn" id="cancelbtn">
-                <i class='bx bx-x'></i>
-            </div>
-        </div>
-        <!-- Overlays on the background when pop up is active -->
-        <div id="overlay" class="" ></div>
-        
+        <?php
+            if (isset($_GET['id'])) {
+                $treeId = $_GET['id'];
+                $sql = $conn->query("SELECT * FROM treestore WHERE id='$treeId'");
+                if($sql->num_rows > 0) {
+                    while($data = $sql->fetch_array()) {
+                    echo "
+                        <div id='pop' class='pop active'>
+                            <div class='pop-body'>
+                                <img src='". $data['treeImage']. "'>
+                                <div class='details'>
+                                    <h1>". $data['treeName']. "</h1>
+                                    <h3>". $data['treeFeatures']. "</h3>
+                                    <p>". $data['treePrice']. "</p>
+                                    <a href='". $data['id']. "' id='add'>ADD TO CART</a>
+                                </div>
+                            </div>
+                            <div class='cancelbtn' id='cancelbtn'>
+                                <i class='bx bx-x'></i>
+                            </div>
+                        </div>
+                        <!-- Overlays on the background when pop up is active -->
+                        <div id='overlay' class='active' ></div>
+                    ";
+                    }
+                } else {}
+            }
+        ?>
+
         <!-- Javascript files and libraries -->
         <script>
             const sell = document.querySelector(".sell");
             const sale = document.querySelector(".sale");
+            const cancelbtn = document.querySelector("#cancelbtn");
+            const pop = document.querySelector("#pop");
+            const overlay = document.querySelector("#overlay");
 
             sell.onclick = () => {
                 sale.classList.toggle("active");
             };
+            //CANCEL FOR POP UP
+            cancelbtn.onclick = () => {
+                pop.classList.remove('active');
+                overlay.classList.remove("active");
+            }
         </script>
     </body>
 </html>
