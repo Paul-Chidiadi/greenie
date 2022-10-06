@@ -122,13 +122,13 @@ const reply = document.querySelector(".reply");
 copyBtn.onclick = () => {
   navigator.clipboard.writeText(link.textContent);
   reply.style.display = "block";
-  setInterval(() => {
+  setTimeout(() => {
     reply.style.display = "none";
-  }, 3200);
+  }, 4000);
 };
 
 //Make screen information hide after 10s
 const screenInfo = document.querySelector(".screen-info");
-setInterval(() => {
+setTimeout(() => {
   screenInfo.style.display = "none";
-}, 10000);
+}, 15000);

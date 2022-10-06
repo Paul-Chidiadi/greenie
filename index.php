@@ -1,5 +1,36 @@
+  <?php 
+    if (isset($_POST['send'])) {
+        # code...
+        $name = $_POST['namePHP'];
+        $mailFrom = $_POST['emailPHP'];
+        $subject = $_POST['subjectPHP'];
+        $msg = $_POST['msgPHP'];
+
+        if(!empty($name) && !empty($mailFrom) && !empty($subject) && !empty($msg)){
+            if (filter_var($mailFrom, FILTER_VALIDATE_EMAIL)) { # check if email is correct
+                $mailTo = "";//your email address here
+                $headers = "From: ".$mailFrom;
+                $txt = "You received a messsage from".$name.".\n\n".$msg;
+
+                $myMail = mail($mailTo, $subject, $txt, $headers);
+                if($myMail) {
+                    exit('<font>Mail sent successfully!</font>');
+                }else{
+                    exit('<font>Mail not sent!</font>');
+                }
+            } else {
+                exit('<font>Email is not Valid!</font>');
+            }
+        } else {
+            exit('<font>All fields are required!</font>');
+        }
+        
+    }
+  ?>
   <?php include_once "include/head.php"?>
   <body>
+    <!-- RESPONSE POP UP -->
+    <div class="response" id="response"></div>
     <!-- HEADER SECTION -->
     <?php include_once "include/header.php"?>
     <!-- BODY SECTION -->
@@ -166,12 +197,12 @@
                 </div>
             </div>
             <div class="form">
-                <form action="" method="post">
-                    <input type="text" class="control" placeholder="Name" required>
-                    <input type="email" class="control" placeholder="Email" required>
-                    <input type="text" class="control" placeholder="Subject" required>
-                    <textarea placeholder="Message" rows="7"></textarea>
-                    <input type="submit" class="btn" value="SEND">
+                <form id="contactForm" action="#">
+                    <input type="text" class="control" id="name" placeholder="Name" required>
+                    <input type="email" class="control" id="email" placeholder="Email" required>
+                    <input type="text" class="control" id="subject" placeholder="Subject" required>
+                    <textarea placeholder="Message" id="msg" rows="7"></textarea>
+                    <input type="submit" class="btn" id="sendBtn" value="SEND">
                 </form>
             </div>
         </div>    

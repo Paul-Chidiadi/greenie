@@ -27,8 +27,15 @@ html {
   scroll-behavior: smooth;
 }
 input,
+select,
+textarea {
+  font-weight: 100;
+  font-family: "Roboto Slab", sans-serif;
+}
+input,
 button,
-select {
+select,
+textarea {
   border: none;
   outline: none;
 }

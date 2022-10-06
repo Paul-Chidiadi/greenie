@@ -27,8 +27,15 @@ html {
   scroll-behavior: smooth;
 }
 input,
+select,
+textarea {
+  font-weight: 100;
+  font-family: "Roboto Slab", sans-serif;
+}
+input,
 button,
-select {
+select,
+textarea {
   border: none;
   outline: none;
 }
@@ -132,7 +139,7 @@ body {
     right: 15px;
     border-radius: 3px;
     width: 230px;
-    transform: 0.5s ease-in;
+    transition: 0.5s ease-in;
     background-color: var(--white);
     padding: 8px 0px;
     z-index: 999;
@@ -297,7 +304,7 @@ body {
 }
 .learn-body {
   width: 100%;
-  padding: 20px auto 0px;
+  padding: 20px 0px 0px;
   text-align: center;
 }
 .learn-body a {
@@ -328,7 +335,7 @@ body {
     font-size: 12px;
   }
   .learn-body {
-    padding: 13px auto 0px;
+    padding: 13px 0px 0px;
   }
   .learn-body a {
     font-size: 13px;
@@ -754,7 +761,7 @@ body {
   margin-bottom: 10px;
 }
 .info .good p {
-  font-family: 400;
+  font-weight: 400;
   font-size: 13px;
   color: var(--blackl);
   padding-bottom: 5px;
@@ -779,7 +786,7 @@ body {
   height: 45px;
   margin-bottom: 20px;
   padding-left: 10px;
-  font-family: 400;
+  font-weight: 400;
   font-size: 13px;
   color: var(--blackl);
   border-radius: 5px;
@@ -793,7 +800,7 @@ body {
   width: 100%;
   margin-bottom: 20px;
   padding: 10px;
-  font-family: 400;
+  font-weight: 400;
   font-size: 13px;
   color: var(--blackl);
   outline: none;
@@ -849,7 +856,7 @@ body {
   overflow: hidden;
 }
 .footer .divide {
-  width: 100;
+  width: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1012,5 +1019,66 @@ body {
   }
   .form.donate p {
     font-size: 15px;
+  }
+}
+
+/* RESPONSE POP UP */
+.response {
+  position: fixed;
+  top: 200px;
+  right: 40px;
+  background-color: var(--greenl);
+  color: var(--blackd);
+  width: fit-content;
+  border-radius: 20px;
+  border: 2px solid var(--black);
+  box-shadow: 0 0 5px 5px var(--blackl);
+  font-family: "Lato", sans-serif;
+  word-wrap: break-word;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  transition: 0.4s;
+  animation: down 7s ease-in 0s;
+  z-index: 99999;
+  display: none;
+}
+/* animation for response pop up*/
+@keyframes down {
+  0% {
+    top: 0px;
+    opacity: 1;
+  }
+  10% {
+    top: 25px;
+    opacity: 1;
+  }
+  15% {
+    top: 50px;
+    opacity: 1;
+  }
+  20% {
+    top: 80px;
+    opacity: 1;
+  }
+  40% {
+    top: 110px;
+    opacity: 1;
+  }
+  60% {
+    top: 140px;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    top: 170px;
+    opacity: 0.3;
+  }
+  100% {
+    top: 200px;
+    opacity: 0.1;
   }
 }

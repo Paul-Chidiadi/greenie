@@ -42,3 +42,39 @@ ScrollReveal().reveal(".comm img, .logo img, .don-top img", {
   delay: 400,
   origin: "right",
 });
+
+// CONTACT US CODE USING JQUERY AND AJAX
+$(document).ready(function () {
+  $("#contactForm").on("submit", function (e) {
+    e.preventDefault();
+  });
+  $("#sendBtn").on("click", function () {
+    console.log("correct");
+    let name = $("#name").val();
+    let email = $("#email").val();
+    let subject = $("#subject").val();
+    let msg = $("#msg").val();
+
+    $.ajax({
+      url: "index.php",
+      method: "POST",
+      data: {
+        send: 1,
+        namePHP: name,
+        emailPHP: email,
+        subjectPHP: subject,
+        msgPHP: msg,
+      },
+      success: function (response) {
+        if (response) {
+          $("#response").html(response);
+          $("#response").css("display", "block");
+          setTimeout(() => {
+            $("#response").css("display", "none");
+          }, 7000);
+        }
+      },
+      dataType: "text",
+    });
+  });
+});
