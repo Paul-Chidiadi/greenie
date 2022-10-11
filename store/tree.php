@@ -43,7 +43,7 @@
                                 <div class="cart" id="cart">
                                     <i class='bx bxs-cart-alt'></i>
                                     <div class="top">
-                                        <p>0</p>
+                                        <p class="cartNum">0</p>
                                     </div>
                                 </div>
                             </a>
@@ -185,12 +185,14 @@
                     echo "
                         <div id='pop' class='pop active'>
                             <div class='pop-body'>
-                                <img src='". $data['treeImage']. "'>
+                                <img id='image' src='". $data['treeImage']. "'>
                                 <div class='details'>
-                                    <h1>". $data['treeName']. "</h1>
+                                    <h1 id='name'>". $data['treeName']. "</h1>
                                     <h3>". $data['treeFeatures']. "</h3>
-                                    <p>". $data['treePrice']. "</p>
-                                    <a href='". $data['id']. "' id='add'>ADD TO CART</a>
+                                    <p id='price'>". $data['treePrice']. "</p>
+                                    <input type='number' id='qty' min='1' value='1'>
+                                    <input type='hidden' id='ided' value='". $data['id']. "'>
+                                    <a href='#' id='addbtn'>ADD TO CART</a>
                                 </div>
                             </div>
                             <div class='cancelbtn' id='cancelbtn'>
@@ -202,25 +204,32 @@
                     ";
                     }
                 } else {}
+            } else {# if there is no $_GET['id'] still render the pop but set class not active
+                #(this is so that our elements won't be null in javascript)
+                echo "
+                    <div id='pop' class='pop'>
+                        <div class='pop-body'>
+                            <img id='image' src=''>
+                            <div class='details'>
+                                <h1 id='name'></h1>
+                                <h3></h3>
+                                <p id='price'></p>
+                                <input type='number' id='qty' min='1' value='1'>
+                                <input type='hidden' id='ided' value=''>
+                                <a href='#' id='addbtn'>ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class='cancelbtn' id='cancelbtn'>
+                            <i class='bx bx-x'></i>
+                        </div>
+                    </div>
+                    <!-- Overlays on the background when pop up is active -->
+                    <div id='overlay' class='' ></div>
+                ";
             }
         ?>
 
         <!-- Javascript files and libraries -->
-        <script>
-            const sell = document.querySelector(".sell");
-            const sale = document.querySelector(".sale");
-            const cancelbtn = document.querySelector("#cancelbtn");
-            const pop = document.querySelector("#pop");
-            const overlay = document.querySelector("#overlay");
-
-            sell.onclick = () => {
-                sale.classList.toggle("active");
-            };
-            //CANCEL FOR POP UP
-            cancelbtn.onclick = () => {
-                pop.classList.remove('active');
-                overlay.classList.remove("active");
-            }
-        </script>
+        <script src="treedata.js"></script>
     </body>
 </html>
