@@ -64,7 +64,7 @@
                             <p>Sure you want you log out?</p>
                             <br>
                             <a href="#">NOT YET</a>
-                            <a href="#">LOGOUT NOW</a>
+                            <a href="logout.php">LOGOUT NOW</a>
                         </div>
                     </div>
                 </ul>

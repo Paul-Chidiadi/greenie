@@ -45,7 +45,7 @@
                             <br> 
                     
                             Kind Regards,<br>
-                            CHIZZYB.
+                            GREENIE.
                         ";
                         $mail->send();
                         if($mail->send()){
