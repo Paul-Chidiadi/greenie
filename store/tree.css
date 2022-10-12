@@ -880,13 +880,13 @@ h6 {
     transform: none;
     margin: 30px auto;
     grid-template-columns: 1fr;
-    background-color: var(--black);
+    /* background-color: var(--black); */
   }
   .log-body form.login {
     display: block;
     width: 85%;
     margin: 70px auto;
-    background-color: var(--black);
+    /* background-color: var(--black); */
   }
 }
 @media screen and (max-width: 350px) {
