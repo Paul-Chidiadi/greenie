@@ -913,12 +913,12 @@ h6 {
   font-size: 12px;
   text-align: center;
   transition: 0.4s;
-  animation: down 7s ease-in 0s;
+  animation: godown 7s ease-in 0s;
   z-index: 99999;
   display: none;
 }
 /* animation for response pop up*/
-@keyframes down {
+@keyframes godown {
   0% {
     top: 0px;
     opacity: 1;
