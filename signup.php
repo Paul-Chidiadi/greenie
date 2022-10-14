@@ -109,7 +109,18 @@
                     <Label>Email *</Label>
                     <input type="email" class="control" id="email" placeholder="Email" required>
                     <Label>Referer *</Label>
-                    <input type="email" class="control" id="referer" placeholder="Referer  -optional-">
+                    <input type="email" class="control" id="referer" placeholder="Referer  -optional-" 
+                        value="
+                            <?php
+                                if (isset($_GET['referer'])) {
+                                    $referer =$_GET['referer'];
+                                    echo $referer;
+                                }else {
+                                    
+                                }
+                            ?>
+                        "
+                    >
                 </div>
                 <div class="path">
                     <section>

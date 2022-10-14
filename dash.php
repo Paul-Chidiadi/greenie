@@ -171,7 +171,7 @@
                                 </span>
                             </h1>
                             <p>Invite people to join this community with your link below<br><br>
-                                <span id="link">greenie.com/signup.php?<?php echo $email; ?></span>
+                                <span id="link">greenie.com/signup.php?referer=<?php echo $email; ?></span>
                                 <button class="log" id="copybtn">COPY</button>
                             </p>
                             <div class="reply">COPIED</div>
