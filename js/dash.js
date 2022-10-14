@@ -157,3 +157,34 @@ updateBtn.onclick = () => {
   let formData = new FormData(form);
   xhr.send(formData);
 };
+
+//sending CRUD data using AJAX for UPLOAD SECTION
+const formUpload = document.querySelector(".uploads form");
+const uploadBtn = document.querySelector("#uploadBtns");
+formUpload.onsubmit = (e) => {
+  e.preventDefault();
+};
+uploadBtn.onclick = () => {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "../CRUD/update.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+        if (data) {
+          let response = document.querySelector("#response");
+          response.innerHTML = data;
+          response.style.display = "block";
+          setTimeout(() => {
+            response.style.display = "none";
+          }, 7000);
+          if (data.indexOf("Success") > 0) {
+            window.location = "dash.php";
+          }
+        }
+      }
+    }
+  };
+  let uploadFormData = new FormData(formUpload);
+  xhr.send(uploadFormData);
+};

@@ -91,16 +91,16 @@
                     <small id="genEmail"><?php echo $email; ?></small>
                 </header>
                 <!-- PROFILE -->
-                <?php
-                    #select all data of current user
-                    $sql1 = $conn->query("SELECT * FROM users WHERE email= '$email'");
-                    $data1 = $sql1->fetch_array();
-                    $name = $data1['name'];
-                    $country = $data1['country']; 
-                    $phone = $data1['phone']; 
-                    $profileImg = $data1['profileImg'];
-                ?>
                 <section id="profile" class="menu active">
+                    <?php
+                        #select all data of current user
+                        $sql1 = $conn->query("SELECT * FROM users WHERE email= '$email'");
+                        $data1 = $sql1->fetch_array();
+                        $name = $data1['name'];
+                        $country = $data1['country']; 
+                        $phone = $data1['phone']; 
+                        $profileImg = $data1['profileImg'];
+                    ?>
                     <div class="profile">
                         <div class="pics">
                             <div class="img" style=" background:url(<?php echo $profileImg; ?>) no-repeat center center; background-size: cover;"></div>
@@ -183,9 +183,10 @@
                     <div class="uploads">
                         <form action="" method="post">
                             <div class="path">
+                                <input type="hidden" name="email" value="<?php echo $email; ?>">
                                 <Label>Post a Picture *</Label>
                                 <input type="file" class="control" name="picture" required>
-                                <input type="submit" class="log" name="upload" value="upload">
+                                <input type="submit" class="log" id="uploadBtns" name="upload" value="upload">
                             </div>
                             <div class="path">
                                 <Label>What's on your mind? *</Label>
@@ -197,66 +198,26 @@
                         <h1>UPLOADS</h1>
                         <div class="items">
                             <div class="rows">
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
-                                <div class="prod">
-                                    <img src="img/earn.jpg" alt="">
-                                    <a target="_blank" href="img/earn.jpg" class="click">
-                                        <i >view</i>
-                                    </a>
-                                </div>
+                                <?php
+                                    #SELECT UPLOADS OF CURRENT USER AND DISPLAY
+                                    $sql3 = $conn->query("SELECT image from uploads WHERE email='$email'");
+                                    if($sql3->num_rows > 0){
+                                        while ($data3 = $sql3->fetch_array()) {
+                                            echo "
+                                                <div class='prod'>
+                                                    <img src='". $data3['image']. "' >
+                                                    <a target='_blank' href='". $data3['image']. "' class='click'>
+                                                        <i >view</i>
+                                                    </a>
+                                                </div>
+                                            ";
+                                        }
+                                    } else {
+                                        echo "
+                                            <p>No Uploads Yet!</p>
+                                        ";
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
