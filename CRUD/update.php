@@ -145,6 +145,61 @@
         }
     }
 
+    #PHP CRUD FOR TREE SECTION
+    if (isset($_FILES['treeimage'])) {
+        $email = $conn->real_escape_string($_POST['email']);
+        $name = $conn->real_escape_string($_POST['treename']);
+        $price = $conn->real_escape_string($_POST['treeprice']);
+        $features = $conn->real_escape_string($_POST['treefeatures']);
+
+        # tree image
+        $file = $_FILES['treeimage'];
+        $fileName = $_FILES['treeimage']['name'];
+        $fileTmpName = $_FILES['treeimage']['tmp_name'];
+        $fileSize = $_FILES['treeimage']['size'];
+        $fileError = $_FILES['treeimage']['error'];
+        $fileType = $_FILES['treeimage']['type'];
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+
+        $allow = array('jpg', 'jpeg', 'png', 'pdf');
+
+        if (!empty($email) && !empty($name) && !empty($price) && !empty($features) && !empty($file)) {
+            # code...
+            if(strlen($features) < 395){
+                if(in_array($fileActualExt, $allow)) {
+                    if($fileError === 0) {
+                        if($fileSize <= 4000000) {
+                            $fileNewName = $name.".".$fileActualExt;
+                            $fileDestination = 'store/trees/'.$fileNewName;
+                            $fileMove = '../store/trees/'.$fileNewName;
+
+                            #INSERT INTO DATABASE
+                            $sql = "INSERT INTO treestore (email, treeName, treePrice, treeImage, treeFeatures)
+                            VALUES ('$email', '$name', '$price', '$fileDestination', '$features')";
+                            if (mysqli_query($conn, $sql)) {
+                                move_uploaded_file($fileTmpName, $fileMove);
+                                exit('<font>Upload Successful!</font>');
+                            }else {
+                                exit('<font>Upload Failed!</font>');
+                            }
+                        }else {
+                            exit('<font>Image File is too Large!</font>');
+                        }
+                    }else {
+                        exit('<font>Image Error, try Image Upload Again!</font>');
+                    }
+                }else {
+                    exit('<font>Image Type not Accepted!</font>');
+                }
+            }else {
+                exit('<font>Feature text too Long!</font>');
+            }
+        }else {
+            exit('<font>Empty Inputs!</font>');
+        }
+    }
+
 
 
 ?>

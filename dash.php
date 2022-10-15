@@ -140,14 +140,13 @@
                                         $dataUploads = $conn->query("SELECT * from uploads WHERE email= '$email'");
                                         $totalUploads = $dataUploads-> num_rows;
                                         $earn = 0.1 * 2 * $totalUploads;
-                                        #echo $earn;
                                         #CHECK IF USER EXISTS
                                         $dataCheck = $conn->query("SELECT id from user_info WHERE email= '$email'");
                                         #if user exists in the user_info table then update the table else insert new data into the table
                                         if($dataCheck -> num_rows > 0) {
                                             $conn->query("UPDATE user_info SET earnings$ ='$earn' WHERE email='$email'");
                                         }else {
-                                            #INSERT INVITES INTO DATABASE
+                                            #INSERT earnings INTO DATABASE
                                             $sqlEarn = "INSERT INTO user_info (email, earnings$) VALUES ('$email', '$earn')";
                                             mysqli_query($conn, $sqlEarn);
                                         }
@@ -409,15 +408,90 @@
                             <h2>DATA <i class='bx bx-right-arrow-alt'></i></h2>
                         </div>
                         <div class="col">
-                            <span>0</span>
+                            <span>
+                                <?php
+                                    #CHECK NUMBER OF TREES SOLD BY CURRENT USER 
+                                    $treeSold = $conn->query("SELECT * from treestore WHERE email= '$email' AND treeIsSold='yes'");
+                                    $totalSold = $treeSold-> num_rows;
+                                    #CHECK IF USER EXISTS
+                                    $dataCheck = $conn->query("SELECT id from user_info WHERE email= '$email'");
+                                    #if user exists in the user_info table then update the table else insert new data into the table
+                                    if($dataCheck -> num_rows > 0) {
+                                        $conn->query("UPDATE user_info SET treeSold ='$totalSold' WHERE email='$email'");
+                                    }else {
+                                        #INSERT treesold INTO DATABASE
+                                        $sqlSold = "INSERT INTO user_info (email, treeSold) VALUES ('$email', '$totalSold')";
+                                        mysqli_query($conn, $sqlSold);
+                                    }
+                                    #get number of trees sold by current user
+                                    $sql4 = $conn->query("SELECT * FROM user_info WHERE email= '$email'");
+                                    if ($sql4->num_rows > 0) {
+                                        $data4 = $sql4->fetch_array();
+                                        $sold = $data4['treeSold'];
+                                        echo $sold;
+                                    }else {
+                                        echo 0;
+                                    }
+                                ?>
+                            </span>
                             <h1>TREES SOLD</h1>
                         </div>
                         <div class="col">
-                            <span>0</span>
+                            <span>
+                                <?php
+                                    #CHECK NUMBER OF TREES UPLOADED BY CURRENT USER 
+                                    $treeUploaded = $conn->query("SELECT * from treestore WHERE email= '$email'");
+                                    $totalUploaded = $treeUploaded-> num_rows;
+                                    #CHECK IF USER EXISTS
+                                    $dataCheck = $conn->query("SELECT id from user_info WHERE email= '$email'");
+                                    #if user exists in the user_info table then update the table else insert new data into the table
+                                    if($dataCheck -> num_rows > 0) {
+                                        $conn->query("UPDATE user_info SET treesUploaded ='$totalUploaded' WHERE email='$email'");
+                                    }else {
+                                        #INSERT treesUploaded INTO DATABASE
+                                        $sqlUploaded = "INSERT INTO user_info (email, treesUploaded) VALUES ('$email', '$totalUploaded')";
+                                        mysqli_query($conn, $sqlUploaded);
+                                    }
+                                    #get number of trees sold by current user
+                                    $sql5 = $conn->query("SELECT * FROM user_info WHERE email= '$email'");
+                                    if ($sql5->num_rows > 0) {
+                                        $data5 = $sql5->fetch_array();
+                                        $uploaded = $data5['treesUploaded'];
+                                        echo $uploaded;
+                                    }else {
+                                        echo 0;
+                                    }
+                                ?>
+                            </span>
                             <h1>TREES POSTED FOR SALE</h1>
                         </div>
                         <div class="col">
-                            <span>0</span>
+                            <span>
+                                <?php
+                                    #CHECK NUMBER OF TREES BOUGHT BY CURRENT USER 
+                                    $treeBought = $conn->query("SELECT * from orders WHERE buyer= '$email'");
+                                    $totalBought = $treeBought-> num_rows;
+                                    #CHECK IF USER EXISTS
+                                    $dataCheck = $conn->query("SELECT id from user_info WHERE email= '$email'");
+                                    #if user exists in the user_info table then update the table else insert new data into the table
+                                    if($dataCheck -> num_rows > 0) {
+                                        $conn->query("UPDATE user_info SET treesBought ='$totalBought' WHERE email='$email'");
+                                    }else {
+                                        #INSERT treesUploaded INTO DATABASE
+                                        $sqlBought = "INSERT INTO user_info (email, treesBought) VALUES ('$email', '$totalBought')";
+                                        mysqli_query($conn, $sqlBought);
+                                    }
+                                    #get number of trees sold by current user
+                                    $sql6 = $conn->query("SELECT * FROM user_info WHERE email= '$email'");
+                                    if ($sql6->num_rows > 0) {
+                                        $data6 = $sql6->fetch_array();
+                                        $bought = $data6['treesBought'];
+                                        echo $bought;
+                                    }else {
+                                        echo 0;
+                                    }
+                                ?>
+                            </span>
                             <h1>TREES BOUGHT</h1>
                         </div>
                         <div class="col side">
@@ -430,17 +504,18 @@
                     <div class="make-sales">
                         <form action="" method="post">
                             <div class="path">
+                                <input type="hidden" name="email" value="<?php echo $email; ?>">
                                 <Label>Tree Name *</Label>
-                                <input type="text" class="control" name="treename" placeholder="Tree name" required>
+                                <input type="text" class="control" id="treename" name="treename" placeholder="Tree name" required>
                                 <Label>Tree Price *</Label>
-                                <input type="number" class="control" name="treeprice" min="0" placeholder="Tree price --(note that all transactions are in dollar)--" required>
+                                <input type="number" class="control" id="treeprice" name="treeprice" min="0" placeholder="Tree price --(note that all transactions are in dollar)--" required>
                                 <Label>Tree Image *</Label>
-                                <input type="file" class="control" name="treeimage" required>
+                                <input type="file" class="control" id="treeimage" name="treeimage" required>
                             </div>
                             <div class="path">
                                 <Label>Features *</Label>
-                                <textarea name="treefeatures" cols="30" rows="8" placeholder="Features and Description" required></textarea>
-                                <input type="submit" class="log" name="sale" value="UPLOAD TO SELL NOW">
+                                <textarea id="treefeatures" name="treefeatures" cols="30" rows="8" placeholder="Features and Description" required></textarea>
+                                <input type="submit" class="log" id="sale" name="sale" value="UPLOAD TO SELL NOW">
                             </div>
                         </form>
                     </div>
