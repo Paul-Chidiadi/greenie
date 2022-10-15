@@ -127,6 +127,38 @@ setTimeout(() => {
   screenInfo.style.display = "none";
 }, 15000);
 
+//GET PROFILE IMAGE AS SOON AS PROFILE IMAGE IS UPDATED
+function getProfileImg() {
+  $.ajax({
+    url: "../CRUD/update.php",
+    method: "POST",
+    dataType: "text",
+    data: {
+      profile: 1,
+      email: $("#genEmail").html(),
+    },
+    success: function (response) {
+      let data = "url(" + response + ")";
+      $(".pics .img").css("backgroundImage", data);
+    },
+  });
+}
+//GET ALL UPLOADED IMAGES AS SOON AS AN IMAGE IS UPLOADED
+function getUploads() {
+  $.ajax({
+    url: "../CRUD/update.php",
+    method: "POST",
+    dataType: "text",
+    data: {
+      uploads: 1,
+      email: $("#genEmail").html(),
+    },
+    success: function (response) {
+      $(".items .rows").html(response);
+    },
+  });
+}
+
 //sending CRUD data using AJAX for PROFILE SECTION
 const form = document.querySelector(".update form");
 const updateBtn = document.querySelector("#updateProfile");
@@ -148,7 +180,12 @@ updateBtn.onclick = () => {
             response.style.display = "none";
           }, 7000);
           if (data.indexOf("Success") > 0) {
-            window.location = "dash.php";
+            //clear inputs
+            $("#password").val("");
+            $("#phone").val("");
+            $("#country").val("");
+            $("#picture").val("");
+            getProfileImg();
           }
         }
       }
@@ -179,7 +216,10 @@ uploadBtn.onclick = () => {
             response.style.display = "none";
           }, 7000);
           if (data.indexOf("Success") > 0) {
-            window.location = "dash.php";
+            //clear inputs
+            $("#postpic").val("");
+            $("#posttext").val("");
+            getUploads();
           }
         }
       }

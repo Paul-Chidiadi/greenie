@@ -133,14 +133,29 @@
                     </div>
                     <div class="infos">
                         <div class="part earn">
-                            <h1>Earnings 
+                            <h1>Earnings $
                                 <span>
                                     <?php
+                                        #CHECK UPLOADS DONE BY CURRENT USER AND GET ITS NUMBER 
+                                        $dataUploads = $conn->query("SELECT * from uploads WHERE email= '$email'");
+                                        $totalUploads = $dataUploads-> num_rows;
+                                        $earn = 0.1 * 2 * $totalUploads;
+                                        #echo $earn;
+                                        #CHECK IF USER EXISTS
+                                        $dataCheck = $conn->query("SELECT id from user_info WHERE email= '$email'");
+                                        #if user exists in the user_info table then update the table else insert new data into the table
+                                        if($dataCheck -> num_rows > 0) {
+                                            $conn->query("UPDATE user_info SET earnings$ ='$earn' WHERE email='$email'");
+                                        }else {
+                                            #INSERT INVITES INTO DATABASE
+                                            $sqlEarn = "INSERT INTO user_info (email, earnings$) VALUES ('$email', '$earn')";
+                                            mysqli_query($conn, $sqlEarn);
+                                        }
                                         #get number of earnings of current user
                                         $sql2 = $conn->query("SELECT * FROM user_info WHERE email= '$email'");
                                         if ($sql2->num_rows > 0) {
                                             $data2 = $sql2->fetch_array();
-                                            $earnings = $data2['earnings-$'];
+                                            $earnings = $data2['earnings$'];
                                             echo $earnings;
                                         }else {
                                             echo 0;
@@ -151,13 +166,26 @@
                             <p> <span>HOW TO EARN</span><br> Make a 30 seconds video of you planting a tree in your area, showing your face
                                 and you are set to earn. GREENIE sees you as an eligible earner when you have made at least five invites
                                 and have sold or purchased at least a tree from our <a target="_blank" href="store/tree.php">TREE STORE</a>.
-                                An upload earns you <span>4 Greenie Coins,</span> a <span>Greenie Coin</span> is equivalent to a dollar. 
+                                An upload earns you <span>2 Greenie Coins,</span> a <span>Greenie Coin</span> is equivalent to $0.1. 
                             </p>
                         </div>
                         <div class="part invite">
                             <h1>Invites 
                                 <span>
                                     <?php
+                                        #CHECK REFEREALS DONE BY CURRENT USER AND GET ITS NUMBER 
+                                        $dataInvite = $conn->query("SELECT * from users WHERE referer= '$email'");
+                                        $totalInvites = $dataInvite-> num_rows;
+                                        #CHECK IF USER EXISTS
+                                        $dataCheck = $conn->query("SELECT id from user_info WHERE email= '$email'");
+                                        #if user exists in the user_info table then update the table else insert new data into the table
+                                        if($dataCheck -> num_rows > 0) {
+                                            $conn->query("UPDATE user_info SET invites='$totalInvites' WHERE email='$email'");
+                                        }else {
+                                            #INSERT INVITES INTO DATABASE
+                                            $sqlInvite = "INSERT INTO user_info (email, invites) VALUES ('$email', '$totalInvites')";
+                                            mysqli_query($conn, $sqlInvite);
+                                        }
                                         #get number of invites of current user
                                         $sql2 = $conn->query("SELECT * FROM user_info WHERE email= '$email'");
                                         if ($sql2->num_rows > 0) {
@@ -185,12 +213,12 @@
                             <div class="path">
                                 <input type="hidden" name="email" value="<?php echo $email; ?>">
                                 <Label>Post a Picture *</Label>
-                                <input type="file" class="control" name="picture" required>
+                                <input type="file" class="control" id="postpic" name="picture" required>
                                 <input type="submit" class="log" id="uploadBtns" name="upload" value="upload">
                             </div>
                             <div class="path">
                                 <Label>What's on your mind? *</Label>
-                                <textarea name="posttext" cols="30" rows="5" placeholder="What's on your mind" required></textarea>
+                                <textarea name="posttext" id="posttext" cols="30" rows="5" placeholder="What's on your mind" required></textarea>
                             </div>
                         </form>
                     </div>

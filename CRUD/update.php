@@ -1,6 +1,42 @@
 <?php
     include '../include/conn.php';
 
+    #GET PROFILE IMAGE AS SOON AS PROFILE IMAGE IS UPDATED
+    if (isset($_POST['profile'])) {
+        $email = $conn->real_escape_string($_POST['email']);
+        $sql1 = $conn->query("SELECT * FROM users WHERE email= '$email'");
+        $data1 = $sql1->fetch_array();
+        $profileImg = $data1['profileImg'];
+        exit($profileImg);
+    }
+    
+    #GET ALL UPLOADED IMAGES AS SOON AS AN IMAGE IS UPLOADED
+    if (isset($_POST['uploads'])) {
+        $email = $conn->real_escape_string($_POST['email']);
+        #SELECT UPLOADS OF CURRENT USER AND DISPLAY
+        $sql3 = $conn->query("SELECT image from uploads WHERE email='$email'");
+        if($sql3->num_rows > 0){
+            $response = "";
+            while ($data3 = $sql3->fetch_array()) {
+                $response .= "
+                    <div class='prod'>
+                        <img src='". $data3['image']. "' >
+                        <a target='_blank' href='". $data3['image']. "' class='click'>
+                            <i >view</i>
+                        </a>
+                    </div>
+                ";
+            }
+            exit($response);
+        } else {
+            $no = "";
+            $no .= "
+                <p>No Uploads Yet!</p>
+            ";
+            exit($no);
+        }
+    }
+
     #PHP CRUD FOR PROFILE SECTION
     if (isset($_FILES['file'])) {
         $email = $conn->real_escape_string($_POST['email']);
@@ -27,11 +63,11 @@
             if(in_array($fileActualExt, $allow)) {
                 if($fileError === 0) {
                     if($fileSize <= 4000000) {
-                        $fileNewName = uniqid('IMG-', true).".".$fileActualExt;
+                        $fileNewName = $email.time().".".$fileActualExt;
                         $fileDestination = 'profileImg/'.$fileNewName;
                         $fileMove = '../profileImg/'.$fileNewName;
 
-                        //update number of refers
+                        //update users profile
                         $sqlupdate = $conn->query("UPDATE users SET password='$encrypt_password', phone='$phone', country='$country', profileImg='$fileDestination' WHERE email='$email'");
                         if ($sqlupdate) {
                             move_uploaded_file($fileTmpName, $fileMove);
@@ -53,7 +89,7 @@
         }
     }
 
-    #PHP CRUD FOR PROFILE SECTION
+    #PHP CRUD FOR UPLOAD SECTION
     if (isset($_FILES['picture'])) {
         $email = $conn->real_escape_string($_POST['email']);
         $text = $conn->real_escape_string($_POST['posttext']);
@@ -75,7 +111,11 @@
                 if(in_array($fileActualExt, $allow)) {
                     if($fileError === 0) {
                         if($fileSize <= 4000000) {
-                            $fileNewName = uniqid('IMG-', true).".".$fileActualExt;
+                            //getting Number of uploads from database
+                            $getCount = $conn->query("SELECT * from uploads WHERE email= '$email'");
+                            $count = $getCount-> num_rows;
+                            $uploadCount = $count + 1;
+                            $fileNewName = $email.$uploadCount.".".$fileActualExt;
                             $fileDestination = 'uploadsImg/'.$fileNewName;
                             $fileMove = '../uploadsImg/'.$fileNewName;
     
@@ -104,11 +144,6 @@
             exit('<font>Empty Inputs!</font>');
         }
     }
-
-
-
-
-
 
 
 
