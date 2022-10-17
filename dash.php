@@ -527,19 +527,114 @@
                             <h2>DATA <i class='bx bx-right-arrow-alt'></i></h2>
                         </div>
                         <div class="col">
-                            <span>0</span>
+                            <span>
+                                <?php
+                                    #CHECK UPLOADS DONE BY CURRENT USER AND GET ITS NUMBER 
+                                    $dataUploads = $conn->query("SELECT * from uploads WHERE email= '$email'");
+                                    $totalUploads = $dataUploads-> num_rows;
+                                    $earn = 0.1 * 2 * $totalUploads;
+                                    #CHECK IF USER EXISTS
+                                    $dataCheck = $conn->query("SELECT id from user_info WHERE email= '$email'");
+                                    #if user exists in the user_info table then update the table else insert new data into the table
+                                    if($dataCheck -> num_rows > 0) {
+                                        $conn->query("UPDATE user_info SET earnings$ ='$earn' WHERE email='$email'");
+                                    }else {
+                                        #INSERT earnings INTO DATABASE
+                                        $sqlEarn = "INSERT INTO user_info (email, earnings$) VALUES ('$email', '$earn')";
+                                        mysqli_query($conn, $sqlEarn);
+                                    }
+                                    #get number of earnings of current user
+                                    $sql2 = $conn->query("SELECT * FROM user_info WHERE email= '$email'");
+                                    if ($sql2->num_rows > 0) {
+                                        $data2 = $sql2->fetch_array();
+                                        $earnings = $data2['earnings$'];
+                                        echo $earnings;
+                                    }else {
+                                        echo 0;
+                                    }
+                                ?>
+                            </span>
                             <h1>TOTAL EARNINGS</h1>
                         </div>
                         <div class="col">
-                            <span>0</span>
-                            <h1>CURRENT EARNINGS</h1>
-                        </div>
-                        <div class="col">
-                            <span>0</span>
+                            <span>
+                                <?php
+                                    #CHECK WITHDRAWS DONE BY CURRENT USER AND GET ITS NUMBER 
+                                    $dataWithdraws = $conn->query("SELECT * from withdraws WHERE email= '$email' AND isPaid='yes'");
+                                    $totalWithdraws = 0;
+                                    if ($dataWithdraws-> num_rows > 0) {
+                                        while ($array = $dataWithdraws->fetch_array()) {
+                                            $totalWithdraws += $array['requestedAmt'];
+                                        }
+                                    }
+                                    #CHECK IF USER EXISTS
+                                    $dataCheck = $conn->query("SELECT id from user_info WHERE email= '$email'");
+                                    #if user exists in the user_info table then update the table else insert new data into the table
+                                    if($dataCheck -> num_rows > 0) {
+                                        $conn->query("UPDATE user_info SET amtWithdrawn$ ='$totalWithdraws' WHERE email='$email'");
+                                    }else {
+                                        #INSERT withdraws INTO DATABASE
+                                        $sqlWithdraws = "INSERT INTO user_info (email, amtWithdrawn$) VALUES ('$email', '$totalWithdraws')";
+                                        mysqli_query($conn, $sqlWithdraws);
+                                    }
+                                    #get number of withdraws of current user
+                                    $sql8 = $conn->query("SELECT * FROM user_info WHERE email= '$email'");
+                                    if ($sql8->num_rows > 0) {
+                                        $data8 = $sql8->fetch_array();
+                                        $withdraws = $data8['amtWithdrawn$'];
+                                        echo $withdraws;
+                                    }else {
+                                        echo 0;
+                                    }
+                                ?>
+                            </span>
                             <h1>WITHDRAWALS</h1>
                         </div>
                         <div class="col">
-                            <span>0</span>
+                            <span>
+                                <?php
+                                    #get number of current earnings of current user
+                                    $sql9 = $conn->query("SELECT * FROM user_info WHERE email= '$email'");
+                                    if ($sql9->num_rows > 0) {
+                                        $data9 = $sql9->fetch_array();
+                                        $withdraws = $data9['amtWithdrawn$'];
+                                        $earnings = $data9['earnings$'];
+                                        $currentEarn = $earnings - $withdraws;
+                                        echo $currentEarn;
+                                    }else {
+                                        echo 0;
+                                    }
+                                ?>
+                            </span>
+                            <h1>CURRENT EARNINGS</h1>
+                        </div>
+                        <div class="col">
+                            <span>
+                                <?php
+                                    #CHECK DONATIONS DONE BY CURRENT USER AND GET ITS NUMBER 
+                                    $dataDonations = $conn->query("SELECT * from donations WHERE email= '$email'");
+                                    $totalDonations = $dataDonations-> num_rows;
+                                    #CHECK IF USER EXISTS
+                                    $dataCheck = $conn->query("SELECT id from user_info WHERE email= '$email'");
+                                    #if user exists in the user_info table then update the table else insert new data into the table
+                                    if($dataCheck -> num_rows > 0) {
+                                        $conn->query("UPDATE user_info SET donations ='$totalDonations' WHERE email='$email'");
+                                    }else {
+                                        #INSERT donations INTO DATABASE
+                                        $sqlDonate = "INSERT INTO user_info (email, donations) VALUES ('$email', '$totalDonations')";
+                                        mysqli_query($conn, $sqlDonate);
+                                    }
+                                    #get number of donations of current user
+                                    $sql7 = $conn->query("SELECT * FROM user_info WHERE email= '$email'");
+                                    if ($sql7->num_rows > 0) {
+                                        $data7 = $sql7->fetch_array();
+                                        $donations = $data7['donations'];
+                                        echo $donations;
+                                    }else {
+                                        echo 0;
+                                    }
+                                ?>
+                            </span>
                             <h1>DONATIONS</h1>
                         </div>
                         <div class="col side">
@@ -553,41 +648,45 @@
                     <div class="withdraw">
                         <form action="" method="post">
                             <div class="path">
+                                <input type="hidden" name="email" value="<?php echo $email; ?>">
                                 <Label>Amount *</Label>
-                                <input type="number" class="control" name="amount" min="0" placeholder="Withdraw amount --(note that all transactions are in dollar)--" required>
+                                <input type="number" class="control" id="amount" name="amount" min="0" placeholder="Withdraw amount --(note that all transactions are in dollar)--" required>
                             </div>
-                            <input type="submit" class="log" name="withdraw" value="WITHDRAW">
+                            <input type="submit" class="log" id="withdraw" name="withdraw" value="WITHDRAW">
                         </form>
                     </div>
                     <!-- CHOOSE SECTION -->
                     <h1 class="select" >Select your prefered payment method</h1>
                     <div class="choose">
-                        <form action="" method="post">
+                        <form class="btc" action="" method="post">
                             <div class="path">
-                                <input type="hidden" class="control" name="paymethod" value="Bitcoin" required>
+                                <input type="hidden" name="email" value="<?php echo $email; ?>">
+                                <input type="hidden" class="control" name="btc" value="Bitcoin" required>
                                 <Label>BITCOIN *</Label>
-                                <input type="text" class="control" name="walletadd"  placeholder="Wallet Address" required>
-                                <input type="submit" class="log" name="choose" value="OKAY">
+                                <input type="text" class="control" id="walletadd" name="walletadd"  placeholder="Wallet Address" required>
+                                <input type="submit" class="log" id="chooseBtc" name="chooseBtc" value="OKAY">
                             </div>
                         </form>
-                        <form action="" method="post">
+                        <form class='bank' action="" method="post">
                             <div class="path">
-                                <input type="hidden" class="control" name="paymethod" value="Bank" required>
+                                <input type="hidden" name="email" value="<?php echo $email; ?>">
+                                <input type="hidden" class="control" name="bank" value="Bank" required>
                                 <Label>Bank Name *</Label>
-                                <input type="text" class="control" name="bankname" placeholder="Bank Name" required>
+                                <input type="text" class="control" id="bankname" name="bankname" placeholder="Bank Name" required>
                                 <Label>Account Name *</Label>
-                                <input type="text" class="control" name="accname" placeholder="Account Name" required>
+                                <input type="text" class="control" id="accname" name="accname" placeholder="Account Name" required>
                                 <Label>Account Number *</Label>
-                                <input type="text" class="control" name="accnumber" placeholder="Account Number" required>
-                                <input type="submit" class="log" name="choose" value="OKAY">
+                                <input type="text" class="control" id="accnumber"  name="accnumber" placeholder="Account Number" required>
+                                <input type="submit" class="log" id="chooseBank" name="chooseBank" value="OKAY">
                             </div>
                         </form>
-                        <form action="" method="post">
+                        <form class='eth' action="" method="post">
                             <div class="path">
-                                <input type="hidden" class="control" name="paymethod" value="Etherum" required>
+                                <input type="hidden" name="email" value="<?php echo $email; ?>">
+                                <input type="hidden" class="control" name="eth" value="Etherum" required>
                                 <Label>ETHERUM *</Label>
-                                <input type="text" class="control" name="walletadd"  placeholder="Wallet Address" required>
-                                <input type="submit" class="log" name="choose" value="OKAY">
+                                <input type="text" class="control" id="ethadd" name="walletadd"  placeholder="Wallet Address" required>
+                                <input type="submit" class="log"  id="chooseEth" name="chooseEth" value="OKAY">
                             </div>
                         </form>
                     </div>

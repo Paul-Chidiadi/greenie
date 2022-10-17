@@ -229,7 +229,7 @@ uploadBtn.onclick = () => {
   xhr.send(uploadFormData);
 };
 
-//sending CRUD data using AJAX for UPLOAD SECTION
+//sending CRUD data using AJAX for SALE SECTION
 const formSale = document.querySelector(".make-sales form");
 const saleBtn = document.querySelector("#sale");
 formSale.onsubmit = (e) => {
@@ -262,4 +262,134 @@ sale.onclick = () => {
   };
   let saleFormData = new FormData(formSale);
   xhr.send(saleFormData);
+};
+
+//sending CRUD data using AJAX for WITHDRAW SECTION
+const formWithdraw = document.querySelector(".withdraw form");
+const withdrawBtn = document.querySelector("#withdraw");
+formWithdraw.onsubmit = (e) => {
+  e.preventDefault();
+};
+withdrawBtn.onclick = () => {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "../CRUD/update.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+        if (data) {
+          let response = document.querySelector("#response");
+          response.innerHTML = data;
+          response.style.display = "block";
+          setTimeout(() => {
+            response.style.display = "none";
+          }, 7000);
+          if (data.indexOf("Success") > 0) {
+            //clear inputs
+            $("#amount").val("");
+          }
+        }
+      }
+    }
+  };
+  let withdrawFormData = new FormData(formWithdraw);
+  xhr.send(withdrawFormData);
+};
+
+//sending CRUD data using AJAX for PAYMETHOD SECTION BTC
+const formBtc = document.querySelector(".choose .btc");
+const chooseBtc = document.querySelector("#chooseBtc");
+formBtc.onsubmit = (e) => {
+  e.preventDefault();
+};
+chooseBtc.onclick = () => {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "../CRUD/update.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+        if (data) {
+          let response = document.querySelector("#response");
+          response.innerHTML = data;
+          response.style.display = "block";
+          setTimeout(() => {
+            response.style.display = "none";
+          }, 7000);
+          if (data.indexOf("Success") > 0) {
+            //clear inputs
+            $("#walletadd").val("");
+          }
+        }
+      }
+    }
+  };
+  let btcFormData = new FormData(formBtc);
+  xhr.send(btcFormData);
+};
+
+//sending CRUD data using AJAX for PAYMETHOD SECTION BTC
+const formEth = document.querySelector(".choose .eth");
+const chooseEth = document.querySelector("#chooseEth");
+formEth.onsubmit = (e) => {
+  e.preventDefault();
+};
+chooseEth.onclick = () => {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "../CRUD/update.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+        if (data) {
+          let response = document.querySelector("#response");
+          response.innerHTML = data;
+          response.style.display = "block";
+          setTimeout(() => {
+            response.style.display = "none";
+          }, 7000);
+          if (data.indexOf("Success") > 0) {
+            //clear inputs
+            $("#ethadd").val("");
+          }
+        }
+      }
+    }
+  };
+  let ethFormData = new FormData(formEth);
+  xhr.send(ethFormData);
+};
+
+//sending CRUD data using AJAX for PAYMETHOD SECTION BTC
+const formBank = document.querySelector(".choose .bank");
+const chooseBank = document.querySelector("#chooseBank");
+formBank.onsubmit = (e) => {
+  e.preventDefault();
+};
+chooseBank.onclick = () => {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "../CRUD/update.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+        if (data) {
+          let response = document.querySelector("#response");
+          response.innerHTML = data;
+          response.style.display = "block";
+          setTimeout(() => {
+            response.style.display = "none";
+          }, 7000);
+          if (data.indexOf("Success") > 0) {
+            //clear inputs
+            $("#bankname").val("");
+            $("#accname").val("");
+            $("#accnumber").val("");
+          }
+        }
+      }
+    }
+  };
+  let bankFormData = new FormData(formBank);
+  xhr.send(bankFormData);
 };

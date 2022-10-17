@@ -200,6 +200,87 @@
         }
     }
 
+    #PHP CRUD FOR WITHDRAW SECTION
+    if (isset($_POST['amount'])) {
+        $email = $conn->real_escape_string($_POST['email']);
+        $amount = $conn->real_escape_string($_POST['amount']);
+
+        if (!empty($email) && !empty($amount)) {
+            #INSERT INTO DATABASE
+            $sql = "INSERT INTO withdraws (email, requestedAmt)
+            VALUES ('$email', '$amount')";
+            if (mysqli_query($conn, $sql)) {
+                exit('<font>Request Sent Successfully!</font>');
+            }else {
+                exit('<font>Withdraw Request not sent!</font>');
+            }
+        }else {
+            exit('<font>Empty Inputs!</font>');
+        }
+    }
+
+    #PHP CRUD FOR PAYMETHOD SECTION BTC
+    if (isset($_POST['btc'])) {
+        $email = $conn->real_escape_string($_POST['email']);
+        $btc = $conn->real_escape_string($_POST['btc']);
+        $walletadd = $conn->real_escape_string($_POST['walletadd']);
+        $paymethod = $btc.'->'.$walletadd;
+
+        if (!empty($email) && !empty($btc) && !empty($walletadd)) {
+            #INSERT INTO DATABASE
+            $sqlupdate = $conn->query("UPDATE user_info SET paymethod='$paymethod'  WHERE email='$email'");
+            if ($sqlupdate) {
+                exit('<font>Update Successful!</font>');
+            }else {
+                exit('<font>Update Failed!</font>');
+            }
+        }else {
+            exit('<font>Empty Inputs!</font>');
+        }
+    }
+
+    #PHP CRUD FOR PAYMETHOD SECTION ETH
+    if (isset($_POST['eth'])) {
+        $email = $conn->real_escape_string($_POST['email']);
+        $eth = $conn->real_escape_string($_POST['eth']);
+        $walletadd = $conn->real_escape_string($_POST['walletadd']);
+        $paymethod = $eth.'->'.$walletadd;
+
+        if (!empty($email) && !empty($eth) && !empty($walletadd)) {
+            #INSERT INTO DATABASE
+            $sqlupdate = $conn->query("UPDATE user_info SET paymethod='$paymethod'  WHERE email='$email'");
+            if ($sqlupdate) {
+                exit('<font>Update Successful!</font>');
+            }else {
+                exit('<font>Update Failed!</font>');
+            }
+        }else {
+            exit('<font>Empty Inputs!</font>');
+        }
+    }
+
+    #PHP CRUD FOR PAYMETHOD SECTION BANK
+    if (isset($_POST['bank'])) {
+        $email = $conn->real_escape_string($_POST['email']);
+        $bank = $conn->real_escape_string($_POST['bank']);
+        $bankname = $conn->real_escape_string($_POST['bankname']);
+        $accname = $conn->real_escape_string($_POST['accname']);
+        $accnumber = $conn->real_escape_string($_POST['accnumber']);
+        $paymethod = $bank.'->'.$bankname.'->'.$accname.'->'.$accnumber;
+
+        if (!empty($email) && !empty($bank) && !empty($bankname) && !empty($accname) && !empty($accnumber)) {
+            #INSERT INTO DATABASE
+            $sqlupdate = $conn->query("UPDATE user_info SET paymethod='$paymethod'  WHERE email='$email'");
+            if ($sqlupdate) {
+                exit('<font>Update Successful!</font>');
+            }else {
+                exit('<font>Update Failed!</font>');
+            }
+        }else {
+            exit('<font>Empty Inputs!</font>');
+        }
+    }
+
 
 
 ?>

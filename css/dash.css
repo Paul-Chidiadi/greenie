@@ -409,7 +409,7 @@ body {
 }
 .infos .part h1 span {
   width: 100%;
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Roboto Slab", sans-serif;
   font-weight: bold;
   color: var(--greenl);
@@ -914,7 +914,7 @@ body {
 .data .col span {
   text-align: center;
   font-family: "Roboto Slab", sans-serif;
-  font-size: 30px;
+  font-size: 15px;
   font-weight: bold;
   color: var(--greenl);
 }
