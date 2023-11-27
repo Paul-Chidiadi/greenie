@@ -50,7 +50,7 @@ This app is build with PHP and MyySql.
 - [x] Chat integration
 
 ### App Screenshot
-![screenshot](https://github.com/PrantoshB/React-Portfolio/blob/main/Screenshot%20from%202023-07-01%2022-15-34.png)
+![screenshot](https://github.com/Paul-Chidiadi/greenie/blob/main/green1.png)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
